@@ -15,6 +15,9 @@ Early experiments carried out on a rocker‑bogie rover, 3D‑printed in PLA and
 | Weight (unloaded)   | 0.58 kg (1.27 lb)   | 
 | Motors   | 6 × DC gearmotors, 140 RPM @ 4.5–6 V; stall current 250 mA; stall torque 0.78 N·m   | 
 | Suspension   | Passive rocker‑bogie, ABS chassis with snap‑fit joints   | 
-| Power | 6.0 – 7.4 V battery pack or bench PSU |
+| Power | 6.0 – 7.4 V battery pack|
+| Micro‑controller | Arduino Uno WiFi Rev 2 |
+| Motor driver | Adafruit Motor Shield v2 (I²C, dual TB6612) |
+
 
 
