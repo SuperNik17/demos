@@ -31,3 +31,15 @@ All experiments on the small‑scale prototype were carried out **indoors** at t
 | **On‑board networking** | Arduino Uno WiFi Rev 2 hosts a lightweight **HTTP (TCP/IP) web server** for status pages and basic control. |
 | **Tele‑operation app** | Remote driving also supported via an existing Android app that sends **UDP datagrams** (joystick + button commands) over the same WLAN. |
 | **Communication ports** | I²C between Arduino and Motor Shield; Wi‑Fi 802.11 b/g/n for both TCP and UDP links. |
+
+<p align="center">
+  <img src="Osoyo_app.png"  alt="Osoyoo Wi‑Fi Robot app" width="220">
+  &nbsp;&nbsp;&nbsp; <!-- space in the pics -->
+  <img src="web_server.png" alt="On‑board web‑server GUI" width="260">
+</p>
+<p align="center">
+  <sub><sup>
+    <strong>Left:</strong> <em>Osoyoo Wi‑Fi Robot App</em> – GUI © Osoyoo, all rights reserved. &nbsp;&nbsp;
+    <strong>Right:</strong> In‑house web interface used during indoor tests.
+  </sup></sub>
+</p>
