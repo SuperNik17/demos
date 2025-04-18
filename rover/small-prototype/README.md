@@ -43,3 +43,17 @@ All experiments on the small‑scale prototype were carried out **indoors** at t
     <strong>Right:</strong> In‑house web interface used during indoor tests.
   </sup></sub>
 </p>
+
+## 🖥️ Simulation model
+
+<p align="center">
+  <img src="img/simscape_model.png"
+       alt="Simscape Multibody model of the small‑scale rover"
+       width="400">
+</p>
+<p align="center">
+  <sub><sup>
+    Multiphysics simulations were carried out in
+    <strong>MATLAB&nbsp;Simscape&nbsp;Multibody</strong>.
+  </sup></sub>
+</p
