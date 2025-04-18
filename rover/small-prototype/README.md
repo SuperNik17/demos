@@ -67,4 +67,11 @@ All experiments on the small‑scale prototype were carried out **indoors** at t
    <sub><sup> Comparison of obstacle-crossing performance under identical initial conditions. <strong>Left:</strong> Side view • <strong>Right:</strong> Front view </sup></sub> </p>
 
 
+## 📄 Copyright & Acknowledgments
+This material is shared for non-commercial and academic demonstration purposes only. All rights and intellectual property belong to the University of Naples Federico II – Department of Industrial Engineering. <br>
+Special thanks to Pierangelo Malfi for his significant contributions throughout the development of this project.
+We also extend our gratitude to the master's thesis students who collaborated on various aspects of the prototype's design and testing.
+
+
+
 
