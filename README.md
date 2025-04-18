@@ -1,1 +1,14 @@
-# demos
+# demos <br>
+🎬 Demo Gallery – Project Videos and Animations <br>
+This directory contains videos and GIFs that illustrate the key behaviours of each research prototype.  Use the overview below to locate the material you’re interested in. <br>
+## 📂 demos/
+├── rover/          → six‑wheeled rover mobility tests <br>
+├── hand-eye/       → hand‑eye calibration with coloured marker <br>
+├── h-infinity/     → TurtleBot trajectory tracking with H∞ control <br>
+├── lidar-slam/     → multi‑robot LiDAR SLAM and leader–follower <br>
+├── RGBD-camera-control/    → Linear Actuator control by RGBD Camera <br>
+
+## 📝 README in each sub‑folder <br>
+Every project folder includes a README.md that lists: <br>
+- available clips and a brief description ⚡️ <br>
+- hardware / software setup (robot, sensors, environment) 🛠️ <br>
