@@ -14,3 +14,8 @@ This directory contains videos and GIFs that illustrate the key behaviours of ea
 Every project folder includes a README.md that lists: <br>
 - available clips and a brief description ⚡️ <br>
 - hardware / software setup (robot, sensors, environment) 🛠️ <br>
+
+## 📩 Requesting code or further details
+Source code is not part of this public repository.  For academic collaborations or reviews, please write to [nicolellaarmando@gmail.com](mailto:nicolellaarmando@gmail.com) with a short description of your request. <br>
+
+Enjoy the demos! 
