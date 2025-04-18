@@ -3,7 +3,17 @@ Early experiments carried out on a rocker‑bogie rover, 3D‑printed in PLA and
 
 
 <!--![Small prototype](small_prototype.png)-->
-<img src="small_prototype.png" alt="Small size prototype rover" width="300">
+<p align="center">
+  <img src="small_prototype.png" alt="Small size prototype rover" width="300">
+  &nbsp;&nbsp;&nbsp;
+  <img src="small_rover_architecture.png" alt="Prototype architecture diagram" width="300">
+</p>
+
+<p align="center">
+  <sub><sup>
+    <strong>Left:</strong> Physical prototype • <strong>Right:</strong> System architecture overview
+  </sup></sub>
+</p>
 
 
 
