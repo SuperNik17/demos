@@ -1,6 +1,10 @@
 # 🛠️ Small‑Scale Rover Prototype – Demo Clips
 Early experiments carried out on a rocker‑bogie rover, 3D‑printed in PLA and driven by 12 V gearmotors.  The platform was used to validate the multibody simulation model and basic control logic before committing to the full‑size build.
 
+<!--![Small prototype](small_prototype.png)-->
+<img src="small_prototype.png" alt="Small size prototype rover" width="300">
+
+
 
 ## 🔧 Hardware setup
 | Component | Spec | 
