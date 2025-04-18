@@ -1,6 +1,7 @@
 # 🛠️ Small‑Scale Rover Prototype – Demo Clips
 Early experiments carried out on a rocker‑bogie rover, 3D‑printed in PLA and driven by 12 V gearmotors.  The platform was used to validate the multibody simulation model and basic control logic before committing to the full‑size build.
 
+---
 
 <!--![Small prototype](small_prototype.png)-->
 <p align="center">
@@ -76,11 +77,12 @@ All experiments on the small‑scale prototype were carried out **indoors** at t
    <p align="center"> <img src="no_crossing.gif" alt="Obstacle test - side view" width="300"> &nbsp;&nbsp;&nbsp; <img src="crossing.gif" alt="Obstacle test - front view" width="300"> </p> <p align="center"> 
    <sub><sup> Comparison of obstacle-crossing performance under identical initial conditions. <strong>Left:</strong> Side view • <strong>Right:</strong> Front view </sup></sub> </p>
 
+--
 
 ## 📄 Copyright & Acknowledgments
-This material is shared for non-commercial and academic demonstration purposes only. All rights and intellectual property belong to the University of Naples Federico II – Department of Industrial Engineering. <br>
 Special thanks to Pierangelo Malfi for his significant contributions throughout the development of this project.
-We also extend our gratitude to the master's thesis students who collaborated on various aspects of the prototype's design and testing.
+We also extend our gratitude to the master's thesis students who collaborated on various aspects of the prototype's design and testing.<br>
+This material is shared for non-commercial and academic demonstration purposes only. All rights and intellectual property belong to the University of Naples Federico II – Department of Industrial Engineering. <br>
 
 
 
