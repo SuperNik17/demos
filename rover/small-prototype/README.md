@@ -24,7 +24,7 @@ Early experiments carried out on a rocker‑bogie rover, 3D‑printed in PLA and
 ## Test environment  <br>
 All experiments on the small‑scale prototype were carried out **indoors** at the **LAM4R – Laboratory of Applied Mechanics for Robotics**, Department of Industrial Engineering, University of Naples Federico II.
 
-## 💻 Software setup
+## 💻 Software setup for experimental setup
 | Layer / Tool | Details |
 |--------------|---------|
 | **Firmware** | Developed in the **Arduino IDE** (C++), using the official **Adafruit Motor Shield v2** library for TB6612 drivers. |
