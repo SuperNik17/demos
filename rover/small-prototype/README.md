@@ -56,3 +56,15 @@ All experiments on the small‑scale prototype were carried out **indoors** at t
     Multiphysics environment: <strong>MATLAB Simscape Multibody</strong>.
   </sup></sub>
 </p>
+
+## 🧪 Simulation Tests
+
+1. **Straightforward motion**
+   <p align="center"> <img src="line_forward.gif" alt="Straight movement test in Simscape" width="600"> </p> <p align="center"> <sub><sup> Simulation of the rover moving over flat terrain with passive suspension 
+    dynamics. </sup></sub> </p>
+2. **Obstacle interaction**
+   <p align="center"> <img src="no_crossing.gif" alt="Obstacle test - side view" width="300"> &nbsp;&nbsp;&nbsp; <img src="crossing.gif" alt="Obstacle test - front view" width="300"> </p> <p align="center"> 
+   <sub><sup> Comparison of obstacle-crossing performance under identical initial conditions. <strong>Left:</strong> Side view • <strong>Right:</strong> Front view </sup></sub> </p>
+
+
+
