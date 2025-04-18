@@ -6,6 +6,8 @@ This directory contains videos and GIFs that illustrate the key behaviours of ea
 ├── hand-eye/       → hand‑eye calibration with coloured marker <br>
 ├── h-infinity/     → TurtleBot trajectory tracking with H∞ control <br>
 ├── lidar-slam/     → multi‑robot LiDAR SLAM and leader–follower <br>
+├── vSLAM/     → a brief and simple implementation of the MATLAB vSLAM code <br>
+├── aruco-leader-follower-nav/     → Aruco leader–follower <br>
 ├── RGBD-camera-control/    → Linear Actuator control by RGBD Camera <br>
 
 ## 📝 README in each sub‑folder <br>
