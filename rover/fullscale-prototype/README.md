@@ -97,5 +97,5 @@ During the construction process, two different wheel configurations were conside
 
 ## 📄 Acknowledgments
 The full-scale prototype was developed at the **LAM4R – Laboratory of Applied Mechanics for Robotics**, Department of Industrial Engineering, University of Naples Federico II.
-Special thanks to **Pierangelo Malfi** and **Prof. Sergio Savino** for their contribuition throughout the design and mechanical realization stages.
+Special thanks to **Pierangelo Malfi** and **Prof. Sergio Savino** for their contribuition throughout the design and mechanical realization stages. <br>
 This material is shared for non-commercial and academic demonstration purposes only. All rights and intellectual property belong to the University of Naples Federico II – Department of Industrial Engineering.
