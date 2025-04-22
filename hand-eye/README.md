@@ -1,5 +1,5 @@
 # 🎯 Hand–Eye Calibration for Mobile Robot Manipulation
 
-This module focuses on the implementation and testing of a **marker-based hand–eye calibration** pipeline between a fixed camera and a mobile manipulator mounted on a wheeled robot. The goal is to estimate the transformation between the robot’s end-effector frame and the camera coordinate frame to enable vision-based manipulation and localization.
+This module presents a MATLAB-based implementation of a **marker-based hand–eye calibration** pipeline between an external camera and its end-effector. The system is designed to work with **unstructured fiducial markers** (such as custom patterns), offering flexibility across different platforms and camera models.
 
 ---
