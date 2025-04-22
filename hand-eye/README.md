@@ -82,6 +82,37 @@ The animation below shows the Dobot arm moving through a set of predefined confi
 </p>
 
 
+
+## 📸 Data Acquisition – Sensor Output Views
+
+Below are the different outputs captured by the Intel Realsense D415 during the calibration routine:
+
+<p align="center">
+  <img src="rgb_image.png"   alt="RGB image"   width="200">
+  &nbsp;&nbsp;&nbsp;
+  <img src="depth_image.png" alt="Depth image" width="200">
+  &nbsp;&nbsp;&nbsp;
+  <img src="pc_cloud.png"    alt="Point cloud" width="200">
+</p>
+
+<p align="center">
+  <sub><sup>
+    <strong>Left:</strong> Raw RGB image – <strong>Center:</strong> Depth map – <strong>Right:</strong> Point cloud generated from RGB-D stream.
+  </sup></sub>
+</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
 ## 🧰 Tools & Components
 
 | Component            | Tool / Device                          |
