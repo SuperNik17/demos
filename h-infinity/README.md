@@ -22,3 +22,18 @@ This is achieved through an optimization process based on **Linear Matrix Inequa
 </p>
 <p align="center"><em>Block diagram of the control system, including inverse kinematics, feedforward and feedback components.</em></p>
 
+## 🧪 Experimental Validation
+
+The proposed controller has been validated on a **TurtleBot3 Waffle Pi** using **ROS 2**.  
+Experiments involved tracking a figure-eight (∞) trajectory in an indoor environment with sensor noise and external disturbances.
+<p align="center">
+  <img src="h_inf_setup.png" alt="Setup" width="700"/>
+</p>
+<p align="center"><em>Localization framework and example of the real-world testbed.</em></p>
+
+The localization system is based on the Marvelmind Indoor "GPS" beacons, connected via an Arduino board to ROS 2.  
+The setup includes serial communication publishing position data as ROS topics.
+<p align="center">
+  <img src="localization_setup.png" alt="Localization Setup" width="700"/>
+</p>
+<p align="center"><em>Localization system architecture using Marvelmind and ROS 2.</em></p>
