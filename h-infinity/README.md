@@ -18,7 +18,7 @@ The H∞ controller is designed to **minimize the worst-case amplification** of 
 This is achieved through an optimization process based on **Linear Matrix Inequalities (LMIs)**, ensuring both stability and performance.
 
 <p align="center">
-  <img src="controller_diagram.png" alt="Controller Block Diagram" width="600"/>
+  <img src="controller_diagram2.png" alt="Controller Block Diagram" width="600"/>
 </p>
 <p align="center"><em>Block diagram of the control system, including inverse kinematics, feedforward and feedback components.</em></p>
 
