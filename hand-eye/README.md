@@ -38,11 +38,12 @@ The pipeline is designed for a **mobile robotic platform** equipped with a fixed
 
 
 ## 📐 Transformation Composition
-<p align="center"> <img src="/tree_T.png" alt="Transformation graph - reference frame composition" width="420"> </p> <p align="center"> 
-  <sub><sup> Graph showing the composition of transformations between reference frame (*r*), marker frame (*M*), and camera frame (*c*). The goal of the calibration is to estimate the unknown transformation <strong>\(    
-    {}^r\mathbf{T}_c \)</strong> from the camera frame to the reference. 
+<p align="center"> <img src="tree_T.png" alt="Transformation graph - reference frame composition" width="420"> </p> <p align="center"> 
+  <sub><sup> Graph showing the composition of transformations between reference frame (r), marker frame (M), and camera frame (c). The goal of the calibration is to estimate the unknown transformation rTc from the camera frame to the reference. 
   </sup></sub> 
 </p>
+
+
 
 
 ## 🧰 Tools & Components
