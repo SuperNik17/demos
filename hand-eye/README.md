@@ -122,6 +122,21 @@ The red marker is isolated through a 4-step process based on RGB channel manipul
 </p>
 
 
+## 🧩 Plane Fitting
+
+Due to noise and the limitations of RGB-D sensors, the extracted 3D points may not lie on a perfect plane.  
+A **best-fit plane** is computed to correct misalignments and improve the marker center estimation.
+
+<p align="center">
+  <img src="acquiredVSideal.png" alt="Plane fitting: acquired vs. ideal points" width="500">
+</p>
+
+<p align="center">
+  <sub><sup>
+    Comparison of <strong>acquired</strong> 3D points (purple) and <strong>ideal</strong> fitted plane (green).  
+    The red circle indicates the <strong>estimated marker center</strong> used for registration.
+  </sup></sub>
+</p>
 
 
 
