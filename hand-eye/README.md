@@ -208,10 +208,10 @@ Below is the trend of the squared residual norm as a function of the number of c
 
 
 ## 🛠️ Development Status
-> ⚠️ This module is currently under **active development**.  
-> Code is being validated and optimized; full open-source release is not yet available.  
-> For academic collaboration or review purposes, access may be granted upon request.
-> Source code for the calibration routines will be added to this repository shortly.
+> ⚠️ This module is currently under **active development**.  <br>
+> Code is being validated and optimized; full open-source release is not yet available.  <br>
+> For academic collaboration or review purposes, access may be granted upon request. <br>
+> Source code for the calibration routines will be added to this repository shortly. <br>
 
 
 ---
