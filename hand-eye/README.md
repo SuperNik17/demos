@@ -101,6 +101,25 @@ Below are the different outputs captured by the Intel Realsense D415 during the 
   </sup></sub>
 </p>
 
+## 🎨 Color Segmentation Process
+
+The red marker is isolated through a 4-step process based on RGB channel manipulation:
+
+1. **Red Extraction** – isolate the red channel from the RGB image  
+2. **Grayscale Conversion** – convert the RGB image to grayscale  
+3. **Subtraction** – subtract grayscale from red layer to enhance contrast  
+4. **Binarization** – apply a threshold to detect the red marker
+
+<p align="center">
+  <img src="color_segmentation.png" alt="Red marker segmentation steps" width="700">
+</p>
+
+<p align="center">
+  <sub><sup>
+    Step-by-step segmentation of the red marker: input images are processed and binarized  
+    to extract the invariant calibrator used in the transformation estimation.
+  </sup></sub>
+</p>
 
 
 
