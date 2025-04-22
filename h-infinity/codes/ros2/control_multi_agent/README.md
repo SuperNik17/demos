@@ -31,10 +31,10 @@ Key features:
   - `rclpy`
 
 Ensure controller configs are present under:
-central_pkg/config/ 
-  ├── Kp.json 
-  ├── Kpid.json 
-  └── Kcentralized.json
+central_pkg/config/ <br>
+  ├── Kp.json <br>
+  ├── Kpid.json <br>
+  └── Kcentralized.json <br>
 
 
   ---
