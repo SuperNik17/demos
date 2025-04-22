@@ -1,6 +1,6 @@
 # 🎯 Hand–Eye Calibration for Mobile Robot Manipulation
 
-This module presents a MATLAB-based implementation of a **marker-based hand–eye calibration** pipeline between an external camera and its end-effector. The system is designed to work with **unstructured fiducial markers** (such as custom patterns), offering flexibility across different platforms and camera models.
+This module presents a MATLAB-based implementation of a **marker-based hand–eye calibration** pipeline between an external camera and its end-effector, fundamental for **Position-Based Visual Servoing (PBVS)**. The system is designed to work with **unstructured fiducial markers** (such as custom patterns), offering flexibility across different platforms and camera models.
 
 ---
 
@@ -17,16 +17,31 @@ The pipeline is designed for a **mobile robotic platform** equipped with a fixed
 - **Use case:** Moving object in the robot workspace
 ## 🖼️ System Architecture
 
+## 🖼️ System Architecture
+
 <p align="center">
-  <img src="fPBVS_servoing.png.png" alt="Frame composition diagram - Hand–Eye Calibration" width="500">
+  <img src="PBVS_servoing.png" alt="Frame composition diagram - Hand–Eye Calibration" width="500">
 </p>
 
 <p align="center">
   <sub><sup>
     Frame graph showing the reference transformations between:  
-    base frame \({0}\), end-effector \({E}\), gripper \({G}\), marker, and camera \({C}\).  
+    base frame {0}, end-effector {E}, gripper {G}, marker, and camera {C}.  
     Calibration aims to resolve the unknown transformation between \({C}\) and \({0}\) through pose estimation.
+    <br><br>
+    <em>Diagram adapted from:</em>  
+    Peter Corke, <em>Robotics, Vision and Control: Fundamental Algorithms in MATLAB®</em>, Springer, 2011.  
+    © Springer-Verlag London Limited 2011. All rights reserved.
   </sup></sub>
+</p>
+
+
+
+## 📐 Transformation Composition
+<p align="center"> <img src="/tree_T.png" alt="Transformation graph - reference frame composition" width="420"> </p> <p align="center"> 
+  <sub><sup> Graph showing the composition of transformations between reference frame (*r*), marker frame (*M*), and camera frame (*c*). The goal of the calibration is to estimate the unknown transformation <strong>\(    
+    {}^r\mathbf{T}_c \)</strong> from the camera frame to the reference. 
+  </sup></sub> 
 </p>
 
 
