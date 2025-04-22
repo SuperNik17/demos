@@ -7,7 +7,7 @@
  * This code handles IMU data processing (Kalman filter), SD logging, motor control via Adafruit Motor Shield,
  * and provides a web interface for basic rover interaction.
  * 
- * All rights reserved © LAM4R – UNINA
+ * 
  */
  
 
