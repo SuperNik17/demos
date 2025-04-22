@@ -9,7 +9,7 @@ This Arduino sketch reads position data from a **MarvelMind SuperBeacon** via se
 - Sends the X, Y, Z coordinates as a space-separated string over the Serial port:
   
 
-- Output is intended to be parsed and published inside ROS 2 using scripts like [`read_serial_publisher_ema_2.py`](../read_serial_publisher_ema_2.py) or [`read_serial_publisher_sma.py`](../read_serial_publisher_sma.py)
+- Output is intended to be parsed and published inside ROS 2 using scripts like [`read_serial_publisher_ema_2.py`](h-infinity/codes/ros2/read_serial_ros2/read_serial_publisher_ema_2.py) or [`read_serial_publisher_sma.py`](h-infinity/codes/ros2/read_serial_ros2/read_serial_publisher_sma.py)
 
 ## ⚙️ Hardware Requirements
 
