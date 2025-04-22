@@ -37,3 +37,13 @@ The setup includes serial communication publishing position data as ROS topics.
   <img src="localization_setup.png" alt="Localization Setup" width="700"/>
 </p>
 <p align="center"><em>Localization system architecture using Marvelmind and ROS 2.</em></p>
+
+
+## 📊 Performance Metrics
+
+| Controller           | X RMS Error [m] | Y RMS Error [m] |
+|----------------------|------------------|------------------|
+| P (filter)           | 0.0032           | 0.0027           |
+| PID                  | 0.0031           | 0.0024           |
+| Full Order (H∞)      | **0.0028**       | **0.0021**       |
+
