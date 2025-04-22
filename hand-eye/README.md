@@ -159,6 +159,33 @@ This projection helps reduce the influence of noise before running the ICP align
 </p>
 
 
+## 🧠 Optimization and Matrix Computation
+
+The final transformation rTc is estimated using a **nonlinear least-squares solver**, which minimizes the residuals between the registered points in the robot frame and those in the camera frame.
+
+The estimated marker center lies within a 2 mm radius from the ideal location in most trials:
+
+<p align="center">
+  <img src="bull_eye.png" alt="Accuracy of calibration points" width="250">
+</p>
+
+<p align="center">
+  <sub><sup>
+    Blue dots: estimated positions across trials • Red dot: reference • Dashed rings: tolerance zones.
+  </sup></sub>
+</p>
+
+Below is the trend of the squared residual norm as a function of the number of calibration poses:
+
+<p align="center">
+  <img src="LSQ.jpg" alt="LSQ residual trend" width="400">
+</p>
+
+<p align="center">
+  <sub><sup>
+    Residual error stabilizes after ~6 calibration samples.
+  </sup></sub>
+</p>
 
 
 
