@@ -208,7 +208,40 @@ Below is the trend of the squared residual norm as a function of the number of c
 
 
 ## 🛠️ Development Status
-
 > ⚠️ This module is currently under **active development**.  
 > Code is being validated and optimized; full open-source release is not yet available.  
 > For academic collaboration or review purposes, access may be granted upon request.
+> Source code for the calibration routines will be added to this repository shortly.
+
+
+---
+
+
+## 📄 Copyright & Acknowledgments
+
+Special thanks to **Prof. Chiara Cosenza** and **Prof. Sergio Savino** for their guidance and supervision throughout the development of this project.
+
+🧪 This work is based on the methodology described in the following publication:
+
+> **Cosenza, C., Malfi, P., Nicolella, A., Niola, V., Savino, S.**  
+> *Hand-Eye Calibration Using Invariant Calibrator Placed to a Robotic Arm*.  
+> In: Quaglia G., Boschetti G., Carbone G. (eds) Advances in Italian Mechanism Science.  
+> Mechanisms and Machine Science, vol 141. Springer, Cham. 2024.  
+> [https://doi.org/10.1007/978-3-031-64553-2_40](https://doi.org/10.1007/978-3-031-64553-2_40)
+
+📚 **BibTeX citation:**
+
+```bibtex
+@InProceedings{10.1007/978-3-031-64553-2_40,
+  author    = {Cosenza, Chiara and Malfi, Pierangelo and Nicolella, Armando and Niola, Vincenzo and Savino, Sergio},
+  editor    = {Quaglia, Giuseppe and Boschetti, Giovanni and Carbone, Giuseppe},
+  title     = {Hand-Eye Calibration Using Invariant Calibrator Placed to a Robotic Arm},
+  booktitle = {Advances in Italian Mechanism Science},
+  year      = {2024},
+  publisher = {Springer Nature Switzerland},
+  address   = {Cham},
+  pages     = {343--350},
+  isbn      = {978-3-031-64553-2},
+  doi       = {10.1007/978-3-031-64553-2_40}
+}
+
