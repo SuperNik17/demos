@@ -140,6 +140,23 @@ A **best-fit plane** is computed to correct misalignments and improve the marker
 
 
 
+## 📐 Projection and Registration
+
+To improve registration, the extracted marker points are projected onto an artificial plane aligned with the estimated marker normal.  
+This projection helps reduce the influence of noise before running the ICP alignment routine.
+
+<p align="center">
+  <img src="parallel_planes.png" alt="Normal vector to plane alignment" width="300">
+  &nbsp;&nbsp;&nbsp;
+  <img src="artificial_plane.png" alt="Artificial point cloud plane" width="300">
+</p>
+
+<p align="center">
+  <sub><sup>
+    <strong>Left:</strong> Ground‑parallel planes used for normal estimation • 
+    <strong>Right:</strong> Artificial planar target (32 × 11 mm) with dot radius 1.5 mm, used for ICP registration.
+  </sup></sub>
+</p>
 
 
 
