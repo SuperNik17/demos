@@ -59,12 +59,10 @@ The setup includes serial communication publishing position data as ROS topics.
 <p align="center"><em>Comparison of wheel speeds for feedforward and feedback control components.</em></p>
 
 
-## 🙏 Acknowledgments
+## 🙏 Copyright & Acknowledgments
 
 This work was carried out during my PhD at the **Universitat Politècnica de València**.
 Special thanks to: **Prof. Leopoldo Armesto**, for his continuous guidance and scientific supervision, **Ricardo Núñez Sáez**, for his contribuition and insightful discussions throughout the project.  
-
-## 🔖 References
 
 **Main scientific reference** for this repository:
 
