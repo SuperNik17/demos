@@ -27,7 +27,7 @@ This is achieved through an optimization process based on **Linear Matrix Inequa
 The proposed controller has been validated on a **TurtleBot3 Waffle Pi** using **ROS 2**.  
 Experiments involved tracking a figure-eight (∞) trajectory in an indoor environment with sensor noise and external disturbances.
 <p align="center">
-  <img src="h_inf_setup_short.png" alt="Setup" width="700"/>
+  <img src="h_inf_setup_short2.gif" alt="Setup" width="700"/>
 </p>
 <p align="center"><em>Localization framework and example of the real-world testbed.</em></p>
 
