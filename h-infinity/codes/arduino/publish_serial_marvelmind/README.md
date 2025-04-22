@@ -30,5 +30,5 @@ This sketch is optimized for integration with a ROS 2 pipeline that processes po
 
 ---
 
-Developed by **Armando Nicolella**
+Developed by **Armando Nicolella** with special thanks to **Rafa Carbonell**
 
