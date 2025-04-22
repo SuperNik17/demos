@@ -31,3 +31,11 @@ It initializes all components (WiFi, IMU, MotorShields, SD), hosts the web inter
 4. Upload the sketch to your board.
 5. Connect to the rover's Wi-Fi network from your phone or PC.
 6. Open a browser and navigate to `http://192.168.4.1`.
+
+
+## 📄 License
+
+This code is provided for academic, prototyping, and research purposes.  
+Feel free to adapt and reuse it with attribution.
+
+---
