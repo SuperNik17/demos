@@ -15,7 +15,7 @@ The pipeline is designed for a **mobile robotic platform** equipped with a fixed
 - **Implementation:** Developed in **MATLAB**, using rigid body transformations and vision-based pose estimation  
 - **Marker:** Non-structured — supports custom patterns if implemented with segmentation  
 - **Use case:** Moving object in the robot workspace
-## 🖼️ System Architecture
+
 
 ## 🖼️ System Architecture
 
@@ -57,7 +57,29 @@ The pipeline is designed for a **mobile robotic platform** equipped with a fixed
   </sup></sub>
 </p>
 
+## 🧠 Calibration Pipeline
 
+The following sequence illustrates the key steps in the custom hand–eye calibration process using a non-structured marker and RGB-D sensing:
+1. **Data Acquisition** – Point clouds captured from multiple robot arm configurations  
+2. **Color Segmentation** – Marker points isolated based on RGB filtering  
+3. **Plane Fitting** – Best-fit plane estimation to reduce noise effects  
+4. **Projection and Registration** – ICP-based alignment of point clouds  
+5. **Optimization and Matrix Computation** – Transformation **rTc** computed from aggregated correspondences
+
+
+### 🎥 Calibration Pose Sampling
+
+The animation below shows the Dobot arm moving through a set of predefined configurations while marker points are tracked in the camera frame.
+
+<p align="center">
+  <img src="nine_pose.gif" alt="Marker tracking across robot poses" width="500">
+</p>
+
+<p align="center">
+  <sub><sup>
+    Sample sequence from calibration procedure — the marker is observed in multiple robot poses to estimate the transformation.
+  </sup></sub>
+</p>
 
 
 ## 🧰 Tools & Components
