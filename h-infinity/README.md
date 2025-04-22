@@ -29,7 +29,7 @@ Experiments involved tracking a figure-eight (∞) trajectory in an indoor envir
 <p align="center">
   <img src="h_inf_setup_short.gif" alt="Setup" width="700"/>
 </p>
-<p align="center"><em>Localization framework and example of the real-world testbed.</em></p>
+<p align="center"><em>The real-world testbed.</em></p>
 
 The localization system is based on the Marvelmind Indoor "GPS" beacons, connected via an Arduino board to ROS 2.  
 The setup includes serial communication publishing position data as ROS topics.
