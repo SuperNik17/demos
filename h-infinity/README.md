@@ -47,3 +47,13 @@ The setup includes serial communication publishing position data as ROS topics.
 | PID                  | 0.0031           | 0.0024           |
 | Full Order (H∞)      | **0.0028**       | **0.0021**       |
 
+
+<p align="center">
+  <img src="exp_trajpng.png" alt="Experimental Trajectory Tracking" width="600"/>
+</p>
+<p align="center"><em>Experimental trajectory tracking performance for different controllers.</em></p>
+
+<p align="center">
+  <img src="wheel_speeds.png" alt="Wheel Speeds Comparison" width="600"/>
+</p>
+<p align="center"><em>Comparison of wheel speeds for feedforward and feedback control components.</em></p>
