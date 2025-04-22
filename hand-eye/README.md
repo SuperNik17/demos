@@ -43,6 +43,20 @@ The pipeline is designed for a **mobile robotic platform** equipped with a fixed
   </sup></sub> 
 </p>
 
+## 📷 Experimental Setup – Frame Placement
+<p align="center">
+  <img src="camera2robot.png" alt="RGB-D camera and robot end-effector with axes" width="500">
+</p>
+
+<p align="center">
+  <sub><sup>
+    Physical configuration of the hand–eye calibration setup.  
+    The RGB-D camera (Intel Realsense D415) is mounted in a fixed overhead position and captures both the  
+    **end-effector** of the Dobot Magician and part of the **workspace**.  
+    Both camera and robot coordinate frames are visualized for reference.
+  </sup></sub>
+</p>
+
 
 
 
