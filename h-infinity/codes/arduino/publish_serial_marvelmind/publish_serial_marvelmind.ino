@@ -1,3 +1,30 @@
+// =============================================================================
+// Title: MarvelMind Serial Publisher for ROS 2 Integration
+// Authors: Armando Nicolella, Rafa Carbonell
+// Description:
+//     This Arduino sketch interfaces with a MarvelMind SuperBeacon via serial
+//     and publishes 3D position data (X, Y, Z) over USB. The output format is
+//     designed to be compatible with ROS 2 nodes that process serial input and
+//     publish geometry_msgs/Pose messages.
+//
+//     Position values are converted from millimeters to meters and sent as a
+//     space-separated line every 50 ms:
+//
+//         Example: 1.234 2.345 0.678
+//
+//     Optionally, fused IMU data can be printed to the serial monitor.
+//
+// Usage:
+//     - Connect MarvelMind beacon to Arduino via UART
+//     - Upload this sketch
+//     - Use a ROS 2 script to parse and publish the data
+//
+// Notes:
+//     This script is designed for low-latency streaming and assumes the use
+//     of a 115200 baud rate over the default Serial interface.
+// =============================================================================
+
+
 #include "Marvelmind.h"  // Include the Marvelmind library for handling beacon data
 
 #define BAUDRATE 115200  // Set the serial communication baud rate
