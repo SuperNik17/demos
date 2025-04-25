@@ -16,6 +16,15 @@ During a visiting period at UniUD we designed and field-tested a LiDAR-only auto
 * **Move Base** for global & local path-planning
 * **Master-Slave Multi-Agent**: the master builds the map and streams way-points; the slave localises with AMCL into the master's map and follows them
 
+<div align="center">
+
+![Direct LiDAR Odometry – "map"](DLO_map.png)
+
+*Figure 1 – RViz screenshot: 3-D point-cloud (height-coloured) stitched in real time by DLO. *
+
+</div>
+
+
 ## 🛠️  Hardware 
 * **Robot:** AGILEX Scout Mini with CAN/USB interface  
 * **Sensor:** Velodyne VLP-16 (16-beam LiDAR)  
