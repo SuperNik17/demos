@@ -10,7 +10,7 @@
 ## 🚀  Project goal  
 During a visiting period at UniUD we designed and field-tested a LiDAR-only autonomous-navigation pipeline aimed at coordinating multiple **AGILEX Scout Mini** robots. Key elements:
 
-* Real-time pose estimation with **Direct LiDAR Odometry** (DLO)
+* Real-time odometry pose estimation with **Direct LiDAR Odometry** (DLO)
 * 2-D mapping via **GMapping** with and without pre-recorded map
 * **AMCL** for localization
 * **Move Base** for global & local path-planning
@@ -20,8 +20,7 @@ During a visiting period at UniUD we designed and field-tested a LiDAR-only auto
 
 ![Direct LiDAR Odometry – "map"](DLO_map.png)
 
-*Figure 1 – RViz screenshot: 3-D point-cloud (height-coloured) stitched in real time by DLO. *
-
+Figure 1 – RViz screenshot: 3-D map stitched in real time by DLO.
 </div>
 
 
