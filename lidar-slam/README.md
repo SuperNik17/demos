@@ -44,7 +44,7 @@ LiDAR → DLO → {  (1) GMapping → /map
 
 *Figure 4 – Hardware layout for single robot setup: Scout Mini with Velodyne LiDAR, Xavier AGX, and router acting as ROS master.*
 
----
+
 
 ### 🧍‍♂️ Single-Agent – ROS Architecture
 
@@ -52,7 +52,7 @@ LiDAR → DLO → {  (1) GMapping → /map
 
 *Figure 5 – ROS-based software stack for single agent: DLO for pose, GMapping or AMCL for localisation, and Move Base for planning.*
 
----
+
 
 ### 🤖🤖 Multi-Agent Setup – Hardware Architecture
 
@@ -60,7 +60,7 @@ LiDAR → DLO → {  (1) GMapping → /map
 
 *Figure 6 – Two Scout Minis connected via Wi-Fi. Master robot builds the map; slave receives and uses it via AMCL.*
 
----
+
 
 ### 🤖🤖 Multi-Agent – ROS Architecture
 
