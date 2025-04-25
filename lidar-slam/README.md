@@ -42,5 +42,5 @@ LiDAR → DLO → {  (1) GMapping → /map
 
 
 ## 🙏  Acknowledgements
-* University of Udine, for workspace and support  
+* Mechatronics and Robotics Lab, University of Udine, for workspace and support  
 * Diego Tiozzo Fasiolo for his help  
