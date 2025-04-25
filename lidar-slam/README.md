@@ -19,7 +19,7 @@ During a visiting period at UniUD we designed and field-tested a LiDAR-only auto
 ## 🛠️  Hardware 
 * **Robot:** AGILEX Scout Mini with CAN/USB interface  
 * **Sensor:** Velodyne VLP-16 (16-beam LiDAR)  
-* **Compute:** NVIDIA Jetson Xavier AGX (CUDA 11)  
+* **Onboard Compute:** NVIDIA Jetson Xavier AGX (CUDA 11)  
 * **Networking:** on-board Wi-Fi routers; single LAN for multi-robot (master acts as AP, slave as client)
 
 ## 🧩  Logical architecture
