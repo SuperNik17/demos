@@ -38,7 +38,7 @@ LiDAR → DLO → {  (1) GMapping → /map
 * **Multi-robot:** master runs (1); slave receives the shared map, localises with AMCL and tracks the master’s way-points.
 <div align="center">
 
-### 🧍‍♂️ Single-Agent Setup – Hardware Architecture
+### 🤖 Single-Agent Setup – Hardware Architecture
 
 ![Single Agent Hardware](single_agent_hardware_arch.png)
 
@@ -46,7 +46,7 @@ LiDAR → DLO → {  (1) GMapping → /map
 
 
 
-### 🧍‍♂️ Single-Agent – ROS Architecture
+### 🤖 Single-Agent – ROS Architecture
 
 ![Single Agent ROS](single_agent_rosarch2.png)
 
