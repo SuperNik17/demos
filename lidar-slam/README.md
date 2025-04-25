@@ -42,6 +42,24 @@ LiDAR → DLO → {  (1) GMapping → /map
 * **Drift:** without AMCL, visible (> 0.5 m) after ~10 min continuous run.  
 * **Swarm:** slave localisation still sensitive to sharp turns; considering map-merge (`multirobot_map_merge`) for extra robustness.
 
+<div align="center">
+
+### Single Robot Autonomous Navigation
+
+![Single robot navigation](single_reduced_small.gif)
+
+*Figure 2 – Indoor autonomous navigation using Direct LiDAR Odometry, GMapping and Move Base.*  
+*Full `.mov` video available on request.*
+
+### Multi-Agent Swarm – Master-Slave Architecture
+
+![Multi-agent master-slave](multi_agent_short.gif)
+
+*Figure 3 – Master robot shares map and way-points; slave robot localises via AMCL and follows.*  
+*Full `.mov` video available on request.*
+
+</div>
+
 ## 🔭  Next steps
 * Cross-calibration of maps between robots  
 * Heuristic multi-robot map-merge  
