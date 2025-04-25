@@ -48,7 +48,7 @@ LiDAR → DLO → {  (1) GMapping → /map
 
 ### 🧍‍♂️ Single-Agent – ROS Architecture
 
-![Single Agent ROS](single_agent_rosarch.png)
+![Single Agent ROS](single_agent_rosarch2.png)
 
 *Figure 5 – ROS-based software stack for single agent: DLO for pose, GMapping or AMCL for localisation, and Move Base for planning.*
 
@@ -64,7 +64,7 @@ LiDAR → DLO → {  (1) GMapping → /map
 
 ### 🤖🤖 Multi-Agent – ROS Architecture
 
-![Multi Agent ROS](multi_agent_ros_arch.png)
+![Multi Agent ROS](multi_agent_ros_arch2.png)
 
 *Figure 7 – ROS topics and data flow between Master and Slave. The bridge node handles waypoint sharing over Wi-Fi.*
 
