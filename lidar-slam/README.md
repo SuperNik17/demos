@@ -36,6 +36,39 @@ LiDAR → DLO → {  (1) GMapping → /map
 
 * **Single robot:** choose (1) live map or (2) saved map with AMCL drift correction.  
 * **Multi-robot:** master runs (1); slave receives the shared map, localises with AMCL and tracks the master’s way-points.
+<div align="center">
+
+### 🧍‍♂️ Single-Agent Setup – Hardware Architecture
+
+![Single Agent Hardware](single_agent_hardware_arch.png)
+
+*Figure 4 – Hardware layout for single robot setup: Scout Mini with Velodyne LiDAR, Xavier AGX, and router acting as ROS master.*
+
+---
+
+### 🧍‍♂️ Single-Agent – ROS Architecture
+
+![Single Agent ROS](single_agent_rosarch.png)
+
+*Figure 5 – ROS-based software stack for single agent: DLO for pose, GMapping or AMCL for localisation, and Move Base for planning.*
+
+---
+
+### 🤖🤖 Multi-Agent Setup – Hardware Architecture
+
+![Multi Agent Hardware](multi_agent_hardware_arch.png)
+
+*Figure 6 – Two Scout Minis connected via Wi-Fi. Master robot builds the map; slave receives and uses it via AMCL.*
+
+---
+
+### 🤖🤖 Multi-Agent – ROS Architecture
+
+![Multi Agent ROS](multi_agent_ros_arch.png)
+
+*Figure 7 – ROS topics and data flow between Master and Slave. The bridge node handles waypoint sharing over Wi-Fi.*
+
+</div>
 
 ## 📊  Results & open issues
 * **Accuracy:** DLO + AMCL < 5 cm on 20 m indoor loop.  
