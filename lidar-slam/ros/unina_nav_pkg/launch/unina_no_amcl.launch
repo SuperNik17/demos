@@ -1,0 +1,50 @@
+
+<!--
+    File: unina_no_amcl.launch
+    Description: Launch file for setting up real-time navigation without AMCL localization,
+                 relying solely on Direct Lidar Odometry (DLO) and real-time mapping (Gmapping).
+                 
+    Authors: Armando Nicolella, Pierangelo Malfi
+    Institution: University of Naples Federico II
+
+    Notes:
+    - This setup builds the occupancy grid map in real-time using Gmapping.
+    - It uses DLO for odometry without any global localization (no AMCL).
+    - Suitable for structured indoor environments with limited changes.
+    - Topics, frames, and parameters must be adapted to the actual robot setup.
+
+    License: For research and educational purposes only.
+
+    Last updated: April 26, 2025
+-->
+
+
+
+
+
+<?xml version="1.0"?>
+<launch>
+
+    <!-- Launch the Scout Mini robot model (including description and publishers) -->
+    <include file="$(find scout_bringup)/launch/scout_mini_robot_base.launch" />
+
+    <!-- Start the Velodyne VLP-16 LiDAR driver -->
+    <include file="$(find velodyne_pointcloud)/launch/VLP16_points.launch" />
+
+    <!-- Run the pointcloud_to_laserscan node to convert PointCloud2 messages into LaserScan messages -->
+    <arg name="pointcloud_topic" default="velodyne_points" />
+    <node name="pc2ls_node" pkg="pointcloud_to_laserscan" type="pointcloud_to_laserscan_node">
+        <remap from="cloud_in" to="$(arg pointcloud_topic)" />
+    </node>
+
+    <!-- Launch the Direct Lidar Odometry (DLO) node without IMU integration -->
+    <include file="$(find direct_lidar_odometry)/launch/dlo.launch" />
+
+    <!-- Start move_base node and real-time mapping using Gmapping (no AMCL involved) -->
+    <include file="$(find move_base)/launch/move_base.launch" />
+    <include file="$(find gmapping)/launch/gmapping.launch" />
+
+    <!-- Launch RViz with a predefined configuration file -->
+    <node name="rviz" pkg="rviz" type="rviz" args="-d $(find unina_nav_pkg)/config/unina_config.rviz" required="true" />
+
+</launch>
