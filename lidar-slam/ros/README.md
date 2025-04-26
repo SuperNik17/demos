@@ -239,9 +239,8 @@ This project is for research and development purposes.
 ---
 
 ## Acknowledgements
-- AgileX Robotics
-- ROS Community
-- Vectr-UCLA Direct Lidar Odometry Developers
+We extend our sincere gratitude to the developers and maintainers of the open-source packages and tools that form the foundation of this project. Their contributions to the robotics and ROS communities are invaluable.​<br>
+We also thank the University of Udine, particularly the Mechatronics and Robotics Lab, for their hospitality and support during our research activities. Their facilities and collaborative environment have been instrumental in advancing this work
 
 ---
 
