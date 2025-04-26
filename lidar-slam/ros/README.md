@@ -210,7 +210,7 @@ The setup has been extended to support multiple robots sharing the same map:
 > - Each robot publishes its own odometry via DLO.
 > - All robots use the same global `/map` frame for navigation and goal setting.
 
-An example launch file structure for multi-agent deployment is provided (`multi_agent.launch`).
+An example launch file structure for multi-agent deployment is provided (`unina_multi.launch`).
 
 Unlike ROS2, which is natively designed for multi-agent systems through DDS communication and namespaces, ROS1 requires explicit setup to enable multiple robots operating together.
 
