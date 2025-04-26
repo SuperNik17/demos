@@ -19,6 +19,7 @@ This repository contains the setup to enable **autonomous navigation** for the *
   - [8. Autonomous Navigation - move_base](#8-autonomous-navigation---move_base)
 - [Quick Launch](#quick-launch)
 - [Saving a Map for AMCL Usage](#saving-a-map-for-amcl-usage)
+- [Multi-Agent Experience](#multi-agent-experience)
 - [Notes and Recommendations](#notes-and-recommendations)
 - [License](#license)
 - [Acknowledgements](#acknowledgements)
@@ -70,7 +71,7 @@ Launch the driver:
 roslaunch velodyne_pointcloud VLP16_points.launch
 ```
 
-> **Important**: Configure the LiDAR network settings (static IP, DHCP off, Host IP, Sensor IP, Gateway IP).
+> **Important**: Configure the LiDAR network settings (static IP, DHCP off, Host IP, Sensor IP, Gateway IP).  
 > If the LiDAR IP is unknown, use tools like **Wireshark** to detect it.
 
 ### 4. PointCloud to LaserScan Conversion
@@ -191,6 +192,28 @@ rosrun unina_nav_pkg navigationina.py
 
 ---
 
+## Multi-Agent Experience
+
+The setup has been extended to support multiple robots sharing the same map:
+
+- **Robot Master**:
+  - Builds or loads the map.
+  - Publishes `/map`.
+  - Runs DLO, Gmapping (if needed), and move_base.
+
+- **Robot Slave**:
+  - Subscribes to `/map` published by the Master.
+  - Runs DLO and move_base (no Gmapping, no map building).
+
+> **Important**:  
+> - Namespaces (`robot1/`, `robot2/`, etc.) must be used to separate topics and frames.
+> - Each robot publishes its own odometry via DLO.
+> - All robots use the same global `/map` frame for navigation and goal setting.
+
+An example launch file structure for multi-agent deployment is provided (`multi_agent.launch`).
+
+---
+
 ## Notes and Recommendations
 - **Frame Consistency**: Rigidly connect all sensor frames (e.g., Velodyne) to the robot model.
 - **Mapping**: Use real-time mapping unless a static environment is guaranteed.
@@ -216,4 +239,3 @@ Feel free to open issues or suggestions to improve this setup.
 ---
 
 > _"Making robots autonomous, one laser scan at a time."_ 🚀
-
