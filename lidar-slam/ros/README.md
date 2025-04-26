@@ -17,7 +17,12 @@ This repository contains the setup to enable **autonomous navigation** for the *
   - [6. Mapping - Gmapping](#6-mapping---gmapping)
   - [7. (Optional) Localization - AMCL](#7-optional-localization---amcl)
   - [8. Autonomous Navigation - move_base](#8-autonomous-navigation---move_base)
+- [Quick Launch](#quick-launch)
+- [Saving a Map for AMCL Usage](#saving-a-map-for-amcl-usage)
+- [Multi-Agent Experience](#multi-agent-experience)
 - [Notes and Recommendations](#notes-and-recommendations)
+- [License](#license)
+- [Acknowledgements](#acknowledgements)
 
 ---
 
@@ -66,8 +71,7 @@ Launch the driver:
 roslaunch velodyne_pointcloud VLP16_points.launch
 ```
 
-> **Important**: Configure the LiDAR network settings (static IP, DHCP off, Host IP, Sensor IP, Gateway IP).
-> 
+> **Important**: Configure the LiDAR network settings (static IP, DHCP off, Host IP, Sensor IP, Gateway IP).  
 > If the LiDAR IP is unknown, use tools like **Wireshark** to detect it.
 
 ### 4. PointCloud to LaserScan Conversion
@@ -123,6 +127,104 @@ Path Planners used:
 
 ---
 
+## Quick Launch
+
+Two dedicated launch files are provided to automatically start the entire navigation stack:
+
+- **Navigation with AMCL and a pre-built map**:
+  ```bash
+  roslaunch unina_nav_pkg unina_amcl.launch
+  ```
+
+- **Navigation without AMCL (real-time SLAM with Gmapping and DLO)**:
+  ```bash
+  roslaunch unina_nav_pkg unina_no_amcl.launch
+  ```
+
+Simply launch the appropriate file depending on the desired navigation mode.  
+No manual node-by-node launch is required.
+
+---
+
+## Saving a Map for AMCL Usage
+
+If you want to use AMCL with a saved map, follow these steps:
+
+1. Launch the robot and sensors:
+```bash
+roslaunch scout_bringup scout_mini_robot_base.launch
+roslaunch velodyne_pointcloud VLP16_points.launch
+rosrun pointcloud_to_laserscan pointcloud_to_laserscan_node cloud_in:=/velodyne_points
+roslaunch direct_lidar_odometry dlo.launch
+```
+
+2. Launch GMapping to build the map:
+```bash
+roslaunch gmapping gmapping.launch
+```
+
+3. Move the robot manually (teleoperation) to explore the environment.
+
+4. Save the generated map:
+```bash
+rosrun map_server map_saver -f /path/where/you/want/to/save/your_map
+```
+
+5. Terminate all nodes.
+
+6. Launch autonomous navigation using AMCL and the saved map:
+```bash
+roslaunch unina_nav_pkg unina_amcl.launch
+```
+
+7. Setting navigation goals:
+- Use RViz `2D Nav Goal`, or
+- Collect waypoints during teleoperation:
+```bash
+rosrun unina_nav_pkg collect_waypoints_cart.py
+rosrun unina_nav_pkg navigationina.py
+```
+
+> **Notes**:  
+> - When AMCL is launched, provide an initial pose using `2D Pose Estimate` in RViz for faster convergence.  
+> - The best RViz configuration is provided in `unina_config.rviz`.
+> - Xavier board can be accessed via SSH or using NoMachine/RustDesk for remote control.
+
+---
+
+## Multi-Agent Experience
+
+The setup has been extended to support multiple robots sharing the same map:
+
+- **Robot Master**:
+  - Builds or loads the map.
+  - Publishes `/map`.
+  - Runs DLO, Gmapping (if needed), and move_base.
+
+- **Robot Slave**:
+  - Subscribes to `/map` published by the Master.
+  - Runs DLO and move_base (no Gmapping, no map building).
+
+> **Important**:  
+> - Namespaces (`robot1/`, `robot2/`, etc.) must be used to separate topics and frames.
+> - Each robot publishes its own odometry via DLO.
+> - All robots use the same global `/map` frame for navigation and goal setting.
+
+An example launch file structure for multi-agent deployment is provided (`unina_multi.launch`).
+
+Unlike ROS2, which is natively designed for multi-agent systems through DDS communication and namespaces, ROS1 requires explicit setup to enable multiple robots operating together.
+
+In ROS1, to achieve a correct multi-agent experience:
+- All robots must connect to the **same ROS Master** (`ROS_MASTER_URI`).
+- Each robot must use its own **namespace** (`/robot1/`, `/robot2/`, etc.).
+- Topic names and TF frames must be properly **namespaced and prefixed** to avoid conflicts.
+- Only one source (typically the Master) must publish the global `/map` topic for shared navigation.
+- Time synchronization across robots is recommended for better performance.
+
+This setup ensures that multiple robots can localize, navigate, and collaborate in a shared environment using a common map.
+
+---
+
 ## Notes and Recommendations
 - **Frame Consistency**: Rigidly connect all sensor frames (e.g., Velodyne) to the robot model.
 - **Mapping**: Use real-time mapping unless a static environment is guaranteed.
@@ -137,9 +239,8 @@ This project is for research and development purposes.
 ---
 
 ## Acknowledgements
-- AgileX Robotics
-- ROS Community
-- Vectr-UCLA Direct Lidar Odometry Developers
+We extend our sincere gratitude to the developers and maintainers of the open-source packages and tools that form the foundation of this project. Their contributions to the robotics and ROS communities are invaluable.​<br>
+We also thank the University of Udine, particularly the Mechatronics and Robotics Lab, for their hospitality and support during our research activities. Their facilities and collaborative environment have been instrumental in advancing this work
 
 ---
 
@@ -148,4 +249,3 @@ Feel free to open issues or suggestions to improve this setup.
 ---
 
 > _"Making robots autonomous, one laser scan at a time."_ 🚀
-
