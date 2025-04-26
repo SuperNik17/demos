@@ -17,7 +17,11 @@ This repository contains the setup to enable **autonomous navigation** for the *
   - [6. Mapping - Gmapping](#6-mapping---gmapping)
   - [7. (Optional) Localization - AMCL](#7-optional-localization---amcl)
   - [8. Autonomous Navigation - move_base](#8-autonomous-navigation---move_base)
+- [Quick Launch](#quick-launch)
+- [Saving a Map for AMCL Usage](#saving-a-map-for-amcl-usage)
 - [Notes and Recommendations](#notes-and-recommendations)
+- [License](#license)
+- [Acknowledgements](#acknowledgements)
 
 ---
 
@@ -67,7 +71,6 @@ roslaunch velodyne_pointcloud VLP16_points.launch
 ```
 
 > **Important**: Configure the LiDAR network settings (static IP, DHCP off, Host IP, Sensor IP, Gateway IP).
-> 
 > If the LiDAR IP is unknown, use tools like **Wireshark** to detect it.
 
 ### 4. PointCloud to LaserScan Conversion
@@ -121,30 +124,70 @@ Path Planners used:
 - `TrajectoryPlannerROS`
 - `NavfnROS`
 
-
 ---
 
 ## Quick Launch
 
-For user convenience, two dedicated launch files are provided to automatically start the entire navigation stack:
-
-- **`unina_amcl.launch`** — Launches the full navigation stack using a pre-saved occupancy grid map and AMCL for localization.
-- **`unina_no_amcl.launch`** — Launches the full navigation stack without AMCL, building the map in real time using Gmapping and relying only on Direct Lidar Odometry.
+Two dedicated launch files are provided to automatically start the entire navigation stack:
 
 - **Navigation with AMCL and a pre-built map**:
   ```bash
   roslaunch unina_nav_pkg unina_amcl.launch
   ```
+
 - **Navigation without AMCL (real-time SLAM with Gmapping and DLO)**:
   ```bash
   roslaunch unina_nav_pkg unina_no_amcl.launch
   ```
 
-Simply launch the appropriate file depending on the desired navigation mode.  <br>
+Simply launch the appropriate file depending on the desired navigation mode.  
 No manual node-by-node launch is required.
 
+---
 
+## Saving a Map for AMCL Usage
 
+If you want to use AMCL with a saved map, follow these steps:
+
+1. Launch the robot and sensors:
+```bash
+roslaunch scout_bringup scout_mini_robot_base.launch
+roslaunch velodyne_pointcloud VLP16_points.launch
+rosrun pointcloud_to_laserscan pointcloud_to_laserscan_node cloud_in:=/velodyne_points
+roslaunch direct_lidar_odometry dlo.launch
+```
+
+2. Launch GMapping to build the map:
+```bash
+roslaunch gmapping gmapping.launch
+```
+
+3. Move the robot manually (teleoperation) to explore the environment.
+
+4. Save the generated map:
+```bash
+rosrun map_server map_saver -f /path/where/you/want/to/save/your_map
+```
+
+5. Terminate all nodes.
+
+6. Launch autonomous navigation using AMCL and the saved map:
+```bash
+roslaunch unina_nav_pkg unina_amcl.launch
+```
+
+7. Setting navigation goals:
+- Use RViz `2D Nav Goal`, or
+- Collect waypoints during teleoperation:
+```bash
+rosrun unina_nav_pkg collect_waypoints_cart.py
+rosrun unina_nav_pkg navigationina.py
+```
+
+> **Notes**:  
+> - When AMCL is launched, provide an initial pose using `2D Pose Estimate` in RViz for faster convergence.  
+> - The best RViz configuration is provided in `unina_config.rviz`.
+> - Xavier board can be accessed via SSH or using NoMachine/RustDesk for remote control.
 
 ---
 
