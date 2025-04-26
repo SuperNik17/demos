@@ -121,6 +121,31 @@ Path Planners used:
 - `TrajectoryPlannerROS`
 - `NavfnROS`
 
+
+---
+
+## Quick Launch
+
+For user convenience, two dedicated launch files are provided to automatically start the entire navigation stack:
+
+- **`unina_amcl.launch`** — Launches the full navigation stack using a pre-saved occupancy grid map and AMCL for localization.
+- **`unina_no_amcl.launch`** — Launches the full navigation stack without AMCL, building the map in real time using Gmapping and relying only on Direct Lidar Odometry.
+
+- **Navigation with AMCL and a pre-built map**:
+  ```bash
+  roslaunch unina_nav_pkg unina_amcl.launch
+  ```
+- **Navigation without AMCL (real-time SLAM with Gmapping and DLO)**:
+  ```bash
+  roslaunch unina_nav_pkg unina_no_amcl.launch
+  ```
+
+Simply launch the appropriate file depending on the desired navigation mode.  <br>
+No manual node-by-node launch is required.
+
+
+
+
 ---
 
 ## Notes and Recommendations
