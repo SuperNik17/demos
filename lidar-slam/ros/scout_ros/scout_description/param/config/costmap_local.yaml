@@ -1,0 +1,21 @@
+global_frame: robot/odom
+rolling_window: true
+
+
+
+robot_base_frame: robot/base_link
+update_frequency: 10.0
+publish_frequency: 5.0
+
+
+obstacle_range: 3    # 5.5  
+raytrace_range: 4.0   #6.0
+
+
+
+plugins:
+  - {name: obstacles_laser,           type: "costmap_2d::ObstacleLayer"}
+  - {name: inflation,                 type: "costmap_2d::InflationLayer"}
+
+inflation:
+    inflation_radius: 0.3   # 1.0
