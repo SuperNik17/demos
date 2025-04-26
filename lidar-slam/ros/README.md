@@ -212,6 +212,17 @@ The setup has been extended to support multiple robots sharing the same map:
 
 An example launch file structure for multi-agent deployment is provided (`multi_agent.launch`).
 
+Unlike ROS2, which is natively designed for multi-agent systems through DDS communication and namespaces, ROS1 requires explicit setup to enable multiple robots operating together.
+
+In ROS1, to achieve a correct multi-agent experience:
+- All robots must connect to the **same ROS Master** (`ROS_MASTER_URI`).
+- Each robot must use its own **namespace** (`/robot1/`, `/robot2/`, etc.).
+- Topic names and TF frames must be properly **namespaced and prefixed** to avoid conflicts.
+- Only one source (typically the Master) must publish the global `/map` topic for shared navigation.
+- Time synchronization across robots is recommended for better performance.
+
+This setup ensures that multiple robots can localize, navigate, and collaborate in a shared environment using a common map.
+
 ---
 
 ## Notes and Recommendations
