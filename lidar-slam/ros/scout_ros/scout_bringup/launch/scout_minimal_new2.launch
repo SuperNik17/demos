@@ -1,0 +1,104 @@
+<launch>
+
+    <arg name="port_name" value="can0" />
+    <arg name="simulated_robot" value="false" />
+    <arg name="model_xacro" default="$(find scout_description)/urdf/scout_v2.xacro" />
+    <arg name="odom_topic_name" default="odom" />
+    <arg name="is_scout_mini" default="true" />
+
+<group ns="robot2">
+
+<!-- Lidar -->
+
+ <include file="$(find velodyne_pointcloud)/launch/VLP16_points.launch">  
+    </include>
+
+    <include file="$(find pointcloud_to_laserscan)/launch/point_to_scan.launch">
+    </include>
+
+     <node pkg="tf" type="static_transform_publisher" name="base_link_to_laser" 
+     args="0.0 0.0 0.0 0.0 0.0 0.0 robot2/base_link robot2/velodyne 100"/>
+     
+   <node pkg="rf2o_laser_odometry" type="rf2o_laser_odometry_node" name="rf2o_laser_odometry" output="screen">
+    <param name="laser_scan_topic" value="/robot2/scan"/>        # topic where the lidar scans are being published
+    <param name="odom_topic" value="/robot2/odom" />              # topic where tu publish the odometry estimations
+    
+    <param name="base_frame_id" value="robot2/base_link"/>            # frame_id (tf) of the mobile robot base. A tf transform from the laser_frame to the base_frame is mandatory
+    <param name="odom_frame_id" value="robot2/odom" />                # frame_id (tf) to publish the odometry estimations  
+    <param name="publish_tf" value="true" />                   # wheter or not to publish the tf::transform (base->odom)  
+    <param name="init_pose_from_topic" value="" /> # (Odom topic) Leave empty to start at point (0,0)
+    <param name="freq" value="10.0"/>                            # Execution frequency.
+    <param name="verbose" value="true" />                       # verbose
+
+ 
+  </node>
+
+<!-- RViz -->
+
+
+<param name="tf_prefix" value="robot2"/>
+
+
+
+    <include file="$(find scout_base)/launch/scout_mini_base.launch">
+        <arg name="port_name" default="$(arg port_name)" />
+        <arg name="simulated_robot" default="$(arg simulated_robot)" />
+        <arg name="odom_topic_name" default="$(arg odom_topic_name)" />
+    </include>
+
+    <include file="$(find scout_description)/launch/description.launch">
+        <arg name="model_xacro" default="$(arg model_xacro)" />
+    </include>
+
+  <node pkg="move_base" type="move_base" respawn="false" name="move_base" output="screen">
+    <rosparam file="$(find scout_description)/param/4wd/costmap_common_params.yaml" command="load" ns="global_costmap" />
+
+    <rosparam file="$(find scout_description)/param/4wd/costmap_common_params.yaml" command="load" ns="local_costmap" />
+
+    <rosparam file="$(find scout_description)/param/4wd/local_costmap_params.yaml" command="load" />
+
+    <rosparam file="$(find scout_description)/param/4wd/global_costmap_params.yaml" command="load" />
+
+    <rosparam file="$(find scout_description)/param/4wd/base_local_planner_params.yaml" command="load" />
+
+    <rosparam file="$(find scout_description)/param/4wd/move_base_params.yaml" command="load" />
+
+
+  </node>
+
+
+
+  <node name="map_server" pkg="map_server" type="map_server" args="$(find scout_description)/maps/leef_map_corretta.yaml" output="screen">
+    <param name="frame_id" value="map"/>
+    
+	
+  </node>
+
+ <node pkg="tf" type="static_transform_publisher" name = "map_to_robot2_map" args = "0 0 0 0 0 0 map robot2/map 100"/>
+<!-- 
+ <node pkg="tf" type="static_transform_publisher" name = "map_to_odom" args = "0 0 0 0 0 0 robot1/map robot1/odom 100 "/>
+ 
+  <node pkg="tf" type="static_transform_publisher" name = "map_to_base_link" args = "0 0 0 0 0 0 robot1/odom robot1/base_link 100 "/>
+-->
+
+
+
+  <node pkg="amcl" type="amcl" name="amcl" output="screen">
+     <rosparam file="$(find scout_description)/param/amcl_params.yaml" command="load" />
+        <param name="initial_pose_x"            value="12.93"/>
+      	<param name="initial_pose_y"            value="1.45"/>
+	<param name="initial_pose_a"            value="41.63"/>
+
+    
+  </node> 
+
+  <node name="car_rviz" pkg="rviz" type="rviz" args="-d $(find scout_description)/rviz/rviz_navigation2.rviz">
+	<remap from="/scan" to = "/robot2/scan"/>
+        <remap from="/odom" to = "/robot2/odom"/>
+  </node>
+
+  <remap from="/robot2/robot2/scan" to = "/robot2/scan"/>
+
+</group>
+
+</launch>

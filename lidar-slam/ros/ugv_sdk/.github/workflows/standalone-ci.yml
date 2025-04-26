@@ -1,0 +1,19 @@
+name: Cpp
+
+on:
+  push:
+    branches: [ next ]
+  pull_request:
+    branches: [ next ]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-18.04
+
+    steps:
+    - uses: actions/checkout@v2
+    - name: Install dependencies
+      run: sudo apt-get install -y build-essential cmake libasio-dev
+    - name: Build and pack
+      run: mkdir build && cd build && cmake -DBUILD_TESTS=ON .. && cmake --build . && cpack    

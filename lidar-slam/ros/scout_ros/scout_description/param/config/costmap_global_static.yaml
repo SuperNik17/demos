@@ -1,0 +1,16 @@
+global_frame: map
+rolling_window: false
+track_unknown_space: true
+
+plugins:
+  - {name: static,                  type: "costmap_2d::StaticLayer"}
+  - {name: inflation,               type: "costmap_2d::InflationLayer"}
+
+update_frequency: 5.0
+publish_frequency: 2.0
+
+obstacle_range: 5.0    # 5.5  
+raytrace_range: 6.0
+
+inflation:
+    inflation_radius: 0.55   # 1.0

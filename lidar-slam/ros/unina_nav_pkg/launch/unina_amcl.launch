@@ -1,0 +1,47 @@
+<!--
+    File: unina_amcl.launch
+    Description: Launch file for setting up AMCL-based localization with a pre-saved map 
+                 and integration into the autonomous navigation stack.
+                 
+    Authors: Armando Nicolella, Pierangelo Malfi
+    Institution: University of Naples Federico II
+
+    Notes:
+    - This file starts the AMCL particle filter for probabilistic localization.
+    - It loads a previously saved occupancy grid map.
+    - It initializes the move_base node for autonomous navigation.
+    - Topics, frames, and parameters must be adapted to the actual robot setup.
+    - Designed for structured indoor environments with relatively static features.
+
+    License: For research and educational purposes only.
+
+    Last updated: April 26, 2025
+-->
+
+
+
+<?xml version="1.0"?>
+<launch>
+    
+    <!-- Launch the Scout Mini robot model (including description and publishers) -->
+    <include file="$(find scout_bringup)/launch/scout_mini_robot_base.launch" />
+
+    <!-- Start the Velodyne VLP-16 LiDAR driver -->
+    <include file="$(find velodyne_pointcloud)/launch/VLP16_points.launch" />
+
+    <!-- Run the pointcloud_to_laserscan node to convert PointCloud2 messages into LaserScan messages for AMCL -->
+    <arg name="pointcloud_topic" default="velodyne_points" />
+    <node name="pc2ls_node" pkg="pointcloud_to_laserscan" type="pointcloud_to_laserscan_node">
+        <remap from="cloud_in" to="$(arg pointcloud_topic)" />
+    </node>
+
+    <!-- Launch the Direct Lidar Odometry (DLO) node without IMU integration -->
+    <include file="$(find direct_lidar_odometry)/launch/dlo.launch" />
+
+    <!-- Start move_base node, including map server loading and AMCL localization -->
+    <include file="$(find move_base)/launch/move_base.launch" />
+
+    <!-- Launch RViz with a predefined configuration file -->
+    <node name="rviz" pkg="rviz" type="rviz" args="-d $(find unina_nav_pkg)/config/unina_config.rviz" required="true" />
+
+</launch>
