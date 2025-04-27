@@ -50,6 +50,12 @@ The system supports both **real-world experiments** and **Ignition Gazebo simula
 | RMSE (m)      | 0.031              | 0.037              |
 | Std Deviation (m) | 0.025          | 0.032              |
 
+<p align="center">
+  <img src="./traj_chasing.gif" alt="Chasing Test Animation" width="400"/>
+</p>
+<p align="center"><em>Animation showing the leader–follower behavior during the Chasing Test.</em></p>
+
+
 
 <p align="center">
   <img src="chasing_test_result.png" alt="Chasing Test" width="400"/>
@@ -102,6 +108,11 @@ The system supports both **real-world experiments** and **Ignition Gazebo simula
 | MAE (m)       | 0.022              |
 | RMSE (m)      | 0.028              |
 | Std Deviation (m) | 0.021          |
+
+<p align="center">
+  <img src="./obs_avoid.gif" alt="Obstacle Avoidance Animation" width="400"/>
+</p>
+<p align="center"><em>Animation showing the collaborative obstacle avoidance behavior between leader and follower robots.</em></p>
 
 
 <p align="center">
