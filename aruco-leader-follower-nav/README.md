@@ -38,8 +38,9 @@ The system supports both **real-world experiments** and **Ignition Gazebo simula
 | RMSE (m)      | 0.031              | 0.037              |
 | Std Deviation (m) | 0.025          | 0.032              |
 
+<img src="./chasing_test_result.png" width="400"/>
 
-
+<sub>Figure: Trajectory tracking of the leader and follower robots during the Chasing Test.</sub>
 ---
 
 ### 📍 Law of Motion Test Results (PID Control)
@@ -59,6 +60,9 @@ The system supports both **real-world experiments** and **Ignition Gazebo simula
 | MAPE (%)      | 3.46               |
 | RMSE (m/s)    | 0.009              |
 | Std Deviation (m/s) | 0.006         |
+
+![Law of Motion SMC Result](smc_law_motion_results.png)
+*Velocity tracking of the leader and follower robots using Sliding Mode Control (SMC) during the Law of Motion Test.*
 
 
 
@@ -82,7 +86,8 @@ The system supports both **real-world experiments** and **Ignition Gazebo simula
 | RMSE (m)      | 0.028              |
 | Std Deviation (m) | 0.021          |
 
-
+![Obstacle Avoidance Result](obstacle_avoidance_result.png)
+*Trajectory of the leader and follower robots during the Obstacle Avoidance Test with dynamic obstacle detection.*
 
 ---
 
