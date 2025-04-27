@@ -81,6 +81,12 @@ The system supports both **real-world experiments** and **Ignition Gazebo simula
 | RMSE (m/s)    | 0.009              |
 | Std Deviation (m/s) | 0.006         |
 
+<p align="center">
+  <img src="./law_motion.gif" alt="Law of Motion Test Animation" width="400"/>
+</p>
+<p align="center"><em>Animation showing the leader and follower velocity synchronization during the Law of Motion Test.</em></p>
+
+
 
 <p align="center">
   <img src="smc_law_motion_results.png" alt="Law of Motion" width="400"/>
