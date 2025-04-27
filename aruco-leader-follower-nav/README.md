@@ -35,6 +35,13 @@ The system supports both **real-world experiments** and **Ignition Gazebo simula
 
 ## 🧪 Experimental Validation
 
+<p align="center">
+  <img src="controller_turtle4.png" alt="Feedback Control" width="400"/>
+</p>
+<p align="center"><em>Feedback control scheme regulating the follower's velocity based on the measured distance error.</em></p>
+
+
+
 ### 📍 Chasing Test Results
 | Metric        | Gazebo Simulation | Real-World Testing |
 |---------------|-------------------|--------------------|
