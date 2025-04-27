@@ -11,6 +11,11 @@ The system supports both **real-world experiments** and **Ignition Gazebo simula
 - Implement **cooperative obstacle avoidance** strategies between leader and follower.
 - Evaluate performance through **tracking accuracy**, **network latency**, and **controller comparisons** (PID vs SMC).
 
+<p align="center">
+  <img src="project_frames.png" alt="Controlled Parameters" width="400"/>
+</p>
+<p align="center"><em>Reference frames of the leader and follower robots, with the controlled distance <strong>d</strong> and angle <strong>α</strong>.</em></p>
+
 ## ✨ Key Features
 - **Leader–Follower System** based on ArUco visual tracking.
 - **Multi-Level Testing** including dynamic following, motion law emulation, and obstacle avoidance.
