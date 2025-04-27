@@ -1,4 +1,4 @@
-# 🚁 ArUco-Based Leader–Follower Navigation with TurtleBot 4
+# 👨‍💻 ArUco-Based Leader–Follower Navigation with TurtleBot 4
 
 ## 📚 Overview
 This project implements a **leader–follower navigation strategy** for mobile robots using **ROS 2** and **TurtleBot 4** platforms.  
