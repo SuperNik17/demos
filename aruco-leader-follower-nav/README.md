@@ -105,6 +105,6 @@ This repository includes:
 > *(Detailed README files for each subfolder and module will be provided separately.)*
 
 ## 🙏 Acknowledgments
-This project was developed at the **University of Naples Federico II**, Department of Industrial Engineering, within the activities of the **LAM4r Laboratory** (Laboratory for Advanced Mechatronics for Robotics).  
+This project was developed at the **University of Naples Federico II**, Department of Industrial Engineering, within the activities of the **LAM4r Laboratory**.  
 The research, design, and development activities were carried out by the laboratory team.  
 Special thanks to **Pasquale Stingo**, who contributed by performing the experimental tests during his Master's thesis project.
