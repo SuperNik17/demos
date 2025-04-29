@@ -218,7 +218,8 @@ Below is the trend of the squared residual norm as a function of the number of c
 
 ## 📄 Copyright & Acknowledgments
 
-Special thanks to **Prof. Chiara Cosenza** and **Prof. Sergio Savino** for their guidance and supervision throughout the development of this project.
+Special thanks to **Prof. Chiara Cosenza** and **Prof. Sergio Savino** for their guidance and supervision throughout the development of this project.<br>
+Thesis Students for testing.
 
 🧪 This work is based on the methodology described in the following publication:
 
