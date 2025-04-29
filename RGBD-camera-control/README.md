@@ -23,14 +23,11 @@ This project demonstrates how to use an RGB-D camera to measure and control the 
 | **Pololu JRK 21v3**         | USB motor controller (with/without feedback)     |
 
 <p align="center">
-  <img src="img/testbench_noslide.png" alt="Test Bench without Slide" width="500"/>
+  <img src="img/testbench_noslide.png" alt="Test Bench without Slide" width="590" style="margin-right: 10px;"/>
+  <img src="img/testbench_slide.png" alt="Test Bench with Ball Control" width="400"/>
 </p>
-<p align="center"><em>Test bench setup without the ball control slide.</em></p>
+<p align="center"><em>Left: test bench without slide. Right: test bench with ball control setup.</em></p>
 
-<p align="center">
-  <img src="img/testbench_slide.png" alt="Test Bench with Ball Control" width="500"/>
-</p>
-<p align="center"><em>Test bench setup for the ball stabilization task.</em></p>
 
 ---
 
