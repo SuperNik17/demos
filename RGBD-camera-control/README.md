@@ -135,15 +135,16 @@ A cylinder fitting algorithm is applied to the 3D point cloud representing the a
 | Red + Blue Markers  | `img/two_marker_compare.png` | `img/two_marker_compare.png` |
 
 <p align="center">
-  <img src="img/no_marker_compare.png" width="400"/>
+  <img src="img/two_marker_compare.png" width="400"/>>
   <img src="img/one_marker_compare.png" width="400"/>
 </p>
-<p align="center"><em>Comparison between JRK and vision-based measurements for markerless and one-marker methods.</em></p>
+<p align="center"><em>Vision-based measurements VS jrk unit for two and one-marker methods.</em></p>
 
 <p align="center">
-  <img src="img/two_marker_compare.png" width="600"/>
+  
+  <img src="img/no_marker_compare.png" width="600"/>
 </p>
-<p align="center"><em>Measurement repeatability using two markers.</em></p>
+<p align="center"><em>Vision-based measurements VS jrk unit for markerless methods.</em></p>
 
 ---
 
