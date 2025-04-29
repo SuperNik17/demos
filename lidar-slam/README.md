@@ -18,7 +18,7 @@ During a visiting period at UniUD we designed and field-tested a LiDAR-only auto
 
 <div align="center">
 
-![Direct LiDAR Odometry – "map"](DLO_map.png)
+![Direct LiDAR Odometry – "map"](img/DLO_map.png)
 
 *RViz screenshot: 3-D map stitched in real time by DLO.*
 </div>
@@ -40,7 +40,7 @@ LiDAR → DLO → {  (1) GMapping → /map
 
 ### 🤖 Single-Agent Setup – Hardware Architecture
 
-![Single Agent Hardware](single_agent_hardware_arch.png)
+![Single Agent Hardware](img/single_agent_hardware_arch.png)
 
 *Hardware layout for single robot setup: Scout Mini with Velodyne LiDAR, Xavier AGX, and router acting as ROS master.*
 
@@ -48,7 +48,7 @@ LiDAR → DLO → {  (1) GMapping → /map
 
 ### 🤖 Single-Agent – ROS Architecture
 
-![Single Agent ROS](single_agent_rosarch2.png)
+![Single Agent ROS](img/single_agent_rosarch2.png)
 
 *ROS-based software stack for single agent: DLO for pose, GMapping or AMCL for localisation, and Move Base for planning.*
 
@@ -56,7 +56,7 @@ LiDAR → DLO → {  (1) GMapping → /map
 
 ### 🤖🤖 Multi-Agent Setup – Hardware Architecture
 
-![Multi Agent Hardware](multi_agent_hardware_arch.png)
+![Multi Agent Hardware](img/multi_agent_hardware_arch.png)
 
 *Two Scout Minis connected via Wi-Fi. Master robot builds the map; slave receives and uses it via AMCL.*
 
@@ -64,7 +64,7 @@ LiDAR → DLO → {  (1) GMapping → /map
 
 ### 🤖🤖 Multi-Agent – ROS Architecture
 
-![Multi Agent ROS](multi_agent_ros_arch2.png)
+![Multi Agent ROS](img/multi_agent_ros_arch2.png)
 
 *ROS topics and data flow between Master and Slave. The bridge node handles waypoint sharing over Wi-Fi.*
 
@@ -79,14 +79,14 @@ LiDAR → DLO → {  (1) GMapping → /map
 
 ### Single Robot Autonomous Navigation
 
-![Single robot navigation](single_reduced_small.gif)
+![Single robot navigation](img/single_reduced_small.gif)
 
 *Indoor autonomous navigation using Direct LiDAR Odometry, GMapping and Move Base.*  
 *Full `.mov` video available on request.*
 
 ### Multi-Agent Swarm – Master-Slave Architecture
 
-![Multi-agent master-slave](multi_agent_short.gif)
+![Multi-agent master-slave](img/multi_agent_short.gif)
 
 *Master robot shares map and way-points; slave robot localises via AMCL and follows.*  
 *Full `.mov` video available on request.*
