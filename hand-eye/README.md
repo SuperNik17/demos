@@ -202,7 +202,6 @@ Below is the trend of the squared residual norm as a function of the number of c
 | Marker detection     | Custom detection (no ArUco required)   |
 | Calibration Optimization solver   | Least Squares  |
 | Toolbox              | MATLAB Computer Vision Toolbox         |         
-| Data logging         | CSV logs               |
 
 
 
