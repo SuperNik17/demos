@@ -22,90 +22,138 @@ This project demonstrates how to use an RGB-D camera to measure and control the 
 | **Pololu LACT4P-12V-05**    | Linear actuator (10 cm stroke, 150 N)           |
 | **Pololu JRK 21v3**         | USB motor controller (with/without feedback)     |
 
+<p align="center">
+  <img src="img/testbench_noslide.png" alt="Test Bench without Slide" width="500"/>
+</p>
+<p align="center"><em>Test bench setup without the ball control slide.</em></p>
+
+<p align="center">
+  <img src="img/testbench_slide.png" alt="Test Bench with Ball Control" width="500"/>
+</p>
+<p align="center"><em>Test bench setup for the ball stabilization task.</em></p>
+
 ---
 
-## 🔧 Software Stack
+## 🛠️ Software Stack
 
 - **Vision processing**: depth stream acquisition, segmentation, and point-cloud geometry
 - **Control loop**: implemented in MATLAB/Simulink for closed-loop actuation
 
 ---
 
-## 📊 Measurement Techniques
+## 🔍 Measurement Techniques
 
 ### 1. Marker-Based
 - Color segmentation to detect red or blue markers
 - Compute Euclidean distance from initial reference or between two markers
 
+<p align="center">
+  <img src="img/marker2markless.png" alt="Marker and Markerless Setup" width="600"/>
+</p>
+<p align="center"><em>Examples of red marker, red+blue marker, and no marker (markerless) setups.</em></p>
+
 ### 2. Markerless (Best Performance)
 A cylinder fitting algorithm is applied to the 3D point cloud representing the actuator shaft:
 
-#### 📄 Algorithm Steps:
+#### Algorithm Steps:
 1. **Acquire** 3D point cloud of the actuator
 2. **Compute** surface normals and flip them toward the cylinder axis
 3. **Project** points along normals toward axis
 4. **Fit a line** to projected points (least squares)
 5. **Measure** actuator stroke as distance between two farthest points on the axis
 
-![Plane Fit Algorithm](./docs/plane_fit_algorithm.png)
+<p align="center">
+  <img src="img/plane_fit_algorithm.png" alt="Plane Fitting Algorithm" width="600"/>
+</p>
+<p align="center"><em>Steps of the plane-fitting algorithm for cylinder detection and measurement.</em></p>
 
-> Reference: /cite{Mechanical_System_Control_by_RGB_D_Device}
+<p align="center">
+  <img src="img/cylinder_fitting.png" alt="Cylinder Fit Result" width="400"/>
+</p>
+<p align="center"><em>Visual output of the fitted cylinder from the point cloud.</em></p>
 
 **Performance:**
-- Average distance error: **2.83 mm**
-- Standard deviation: **0.35 mm** across 5 tests
+- Avg. error: **2.83 mm**, Std. dev.: **0.35 mm** over 5 repetitions
 
 ---
 
-## 🎓 Control Applications
+## 🎮 Control Applications
 
-### 🎈 1. Target Tracking ("Hit Red")
-- Use color segmentation to detect a red cylinder
-- Compute 3D position from RGB-D data
-- Drive actuator to target using vision feedback
-- Implemented in Simulink using closed-loop control
+### 🔴 Target Tracking ("Hit Red")
+- Detect red marker or object
+- Compute 3D position via RGB-D
+- Closed-loop control via Simulink
 
-### ⚖️ 2. Ball Stabilization ("Ball Control")
-- Detect red ball using color + sphere fitting
-- Control actuator to balance the ball at a fixed point
-- Predict motion via discrete derivative (velocity estimate)
-- Feed-forward + PI Control (`Kp = 150`, `Ki = 2`)
-- Tested gain values: `0.1`, `0.09`, `0.08`
+<p align="center">
+  <video src="img/chasing_target.mp4" width="500" controls>
+    Your browser does not support the video tag.
+  </video>
+</p>
+<p align="center"><em>Closed-loop control test to chase a red target using vision feedback.</em></p>
 
-#### Key Result:
-- Stable equilibrium achieved within **8-11 mm** from target despite mechanical friction and sensor noise.
+### ⚖️ Ball Stabilization ("Ball Control")
+- Detect red ball via color + geometry
+- Control actuator to hold it still at desired point
+- Gain tuning: `Kp = 150`, `Ki = 2`, attenuation: `0.1 → 0.09 → 0.08`
+
+<p align="center">
+  <img src="img/pipeline4controlling.png" alt="Control Loop" width="600"/>
+</p>
+<p align="center"><em>Simulink control architecture for the ball stabilization task.</em></p>
+
+<p align="center">
+  <img src="img/zero_point_control_pi_150_2.png" width="400"/>
+  <img src="img/zero_point_controller_attenuation_pi_150_2.png" width="400"/>
+</p>
+<p align="center"><em>Stabilization error to the reference over time for different controller setups.</em></p>
+
+<p align="center">
+  <img src="img/zero_point_controller_attenuation008_pi_150_2.png" width="400"/>
+</p>
+<p align="center"><em>Smoothed response using additional attenuation.</em></p>
+
+🎥 Additional video demos:
+- `docs/zero_point_attenuation_008_pi_150_2.MOV`
+- `docs/zero_point_attenuation_pi_150_2.mp4`
+- `docs/zero_point_pi_150_2.MOV`
 
 ---
 
-## 📆 Experimental Repeatability
+## 📊 Test Results Summary
 
-- **10 actuator positions** tested from 0 to 100 mm
-- **5 repetitions** per position
-- Markerless method proved most robust
+| Test Type           | Kinect                   | RealSense                |
+|---------------------|--------------------------|--------------------------|
+| No Marker           | `img/no_marker_compare.png`  | `img/no_marker_compare.png`  |
+| Red Marker          | `img/one_marker_compare.png` | `img/one_marker_compare.png` |
+| Red + Blue Markers  | `img/two_marker_compare.png` | `img/two_marker_compare.png` |
+
+<p align="center">
+  <img src="img/no_marker_compare.png" width="400"/>
+  <img src="img/one_marker_compare.png" width="400"/>
+</p>
+<p align="center"><em>Comparison between JRK and vision-based measurements for markerless and one-marker methods.</em></p>
+
+<p align="center">
+  <img src="img/two_marker_compare.png" width="600"/>
+</p>
+<p align="center"><em>Measurement repeatability using two markers.</em></p>
 
 ---
 
-## 📄 Repository Structure
+## 📂 Repository Structure
 
 ```
 RGBD-camera-control/
 ├── Linear Actuator control by RGBD Camera/
-│   ├── src/                   # Code for vision and control (MATLAB/Python)
-│   ├── docs/                  # Schematics, algorithm illustrations, images
+│   ├── src/                   # Code (MATLAB/Python)
+│   ├── docs/                  # Diagrams, images, videos
 │   └── README.md              # Project description
 ```
 
 ---
 
-## 📅 Future Work
-- Real-time control optimization
-- Integrate adaptive control strategies (e.g., MPC, reinforcement learning)
-- Apply to more complex robotic systems
-
----
-
-## 📅 Citation
-If you use this project, please cite:
+## 🧠 Citation
+If you use this work, cite:
 
 ```
 @article{nicolella_rgbd_2021,
@@ -123,8 +171,5 @@ If you use this project, please cite:
 
 ---
 
-📈 Developed as part of Armando Nicolella's MSc thesis at Università degli Studi di Napoli Federico II.
-
----
-
+👨‍💻 Developed as part of Armando Nicolella's MSc Thesis @ Università degli Studi di Napoli Federico II
 
