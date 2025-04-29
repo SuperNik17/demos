@@ -6,9 +6,9 @@ This section presents the development and structure of the **full-scale rocker-b
 ## 🖼️ From CAD to Reality
 
 <p align="center">
-  <img src="fullscale_prototype.png" alt="Final prototype - physical rover" width="360">
+  <img src="img/fullscale_prototype.png" alt="Final prototype - physical rover" width="360">
   &nbsp;&nbsp;&nbsp;
-  <img src="final_version_skeleton.jpg" alt="CAD model of full-scale prototype" width="360">
+  <img src="img/final_version_skeleton.jpg" alt="CAD model of full-scale prototype" width="360">
 </p>
 
 <p align="center">
@@ -23,9 +23,9 @@ This section presents the development and structure of the **full-scale rocker-b
 ## 📐 Mechanical Architecture
 
 <p align="center">
-  <img src="lateral_fullscale_proto.png" alt="Side view with dimensions" width="420">
+  <img src="img/lateral_fullscale_proto.png" alt="Side view with dimensions" width="420">
   &nbsp;&nbsp;&nbsp;
-  <img src="frontal_fullscale_proto.png" alt="Frontal view with dimensions" width="380">
+  <img src="img/frontal_fullscale_proto.png" alt="Frontal view with dimensions" width="380">
 </p>
 
 <p align="center">
@@ -74,9 +74,9 @@ During the construction process, two different wheel configurations were conside
 - **Configuration B** – Alternating layout (inner–outer–inner)
 
 <p align="center">
-  <img src="first_proto_moments.jpg" alt="Inline wheel configuration" width="360">
+  <img src="img/first_proto_moments.jpg" alt="Inline wheel configuration" width="360">
   &nbsp;&nbsp;&nbsp;
-  <img src="second_proto_moments.jpg" alt="Alternating wheel configuration" width="360">
+  <img src="img/second_proto_moments.jpg" alt="Alternating wheel configuration" width="360">
 </p>
 
 <p align="center">
