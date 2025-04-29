@@ -1,6 +1,6 @@
 # 🧠 RGB-D Camera Controlled Linear Actuator
 
-This project demonstrates how to use an RGB-D camera to measure and control the position of a linear actuator with no physical contact or feedback sensors. The system leverages real-time depth data to track motion and issue control commands, enabling a flexible and non-invasive actuation strategy.
+This project demonstrates how to use an RGB-D camera to measure and control the position of a linear actuator with no physical contact or further feedback sensors. The system leverages real-time depth data to track motion and issue control commands, enabling a flexible and non-invasive actuation strategy.
 
 ---
 
