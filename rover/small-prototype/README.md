@@ -77,7 +77,7 @@ All experiments on the small‑scale prototype were carried out **indoors** at t
    <p align="center"> <img src="no_crossing.gif" alt="Obstacle test - side view" width="300"> &nbsp;&nbsp;&nbsp; <img src="crossing.gif" alt="Obstacle test - front view" width="300"> </p> <p align="center"> 
    <sub><sup> Comparison of obstacle-crossing performance under identical initial conditions. <strong>Left:</strong> Side view • <strong>Right:</strong> Front view </sup></sub> </p>
 
---
+---
 
 ## 📄 Copyright & Acknowledgments
 Special thanks to Pierangelo Malfi for his significant contributions throughout the development of this project.
