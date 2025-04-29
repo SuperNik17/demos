@@ -20,7 +20,7 @@ The pipeline is designed for a **mobile robotic platform** equipped with a fixed
 ## 🖼️ System Architecture
 
 <p align="center">
-  <img src="PBVS_servoing.png" alt="Frame composition diagram - Hand–Eye Calibration" width="500">
+  <img src="img/PBVS_servoing.png" alt="Frame composition diagram - Hand–Eye Calibration" width="500">
 </p>
 
 <p align="center">
@@ -45,7 +45,7 @@ The pipeline is designed for a **mobile robotic platform** equipped with a fixed
 
 ## 📷 Experimental Setup – Frame Placement
 <p align="center">
-  <img src="camera2robot.png" alt="RGB-D camera and robot end-effector with axes" width="500">
+  <img src="img/camera2robot.png" alt="RGB-D camera and robot end-effector with axes" width="500">
 </p>
 
 <p align="center">
@@ -72,7 +72,7 @@ The following sequence illustrates the key steps in the custom hand–eye calibr
 The animation below shows the Dobot arm moving through a set of predefined configurations while marker points are tracked in the camera frame.
 
 <p align="center">
-  <img src="nine_pose.gif" alt="Marker tracking across robot poses" width="500">
+  <img src="img/nine_pose.gif" alt="Marker tracking across robot poses" width="500">
 </p>
 
 <p align="center">
@@ -88,11 +88,11 @@ The animation below shows the Dobot arm moving through a set of predefined confi
 Below are the different outputs captured by the Intel Realsense D415 during the calibration routine:
 
 <p align="center">
-  <img src="rgb_image.png"   alt="RGB image"   width="200">
+  <img src="img/rgb_image.png"   alt="RGB image"   width="200">
   &nbsp;&nbsp;&nbsp;
-  <img src="depth_image.png" alt="Depth image" width="200">
+  <img src="img/depth_image.png" alt="Depth image" width="200">
   &nbsp;&nbsp;&nbsp;
-  <img src="pc_cloud.png"    alt="Point cloud" width="200">
+  <img src="img/pc_cloud.png"    alt="Point cloud" width="200">
 </p>
 
 <p align="center">
@@ -111,7 +111,7 @@ The red marker is isolated through a 4-step process based on RGB channel manipul
 4. **Binarization** – apply a threshold to detect the red marker
 
 <p align="center">
-  <img src="color_segmentation.png" alt="Red marker segmentation steps" width="700">
+  <img src="img/color_segmentation.png" alt="Red marker segmentation steps" width="700">
 </p>
 
 <p align="center">
@@ -128,7 +128,7 @@ Due to noise and the limitations of RGB-D sensors, the extracted 3D points may n
 A **best-fit plane** is computed to correct misalignments and improve the marker center estimation.
 
 <p align="center">
-  <img src="acquiredVSideal.png" alt="Plane fitting: acquired vs. ideal points" width="500">
+  <img src="img/acquiredVSideal.png" alt="Plane fitting: acquired vs. ideal points" width="500">
 </p>
 
 <p align="center">
@@ -146,9 +146,9 @@ To improve registration, the extracted marker points are projected onto an artif
 This projection helps reduce the influence of noise before running the ICP alignment routine.
 
 <p align="center">
-  <img src="parallel_planes.png" alt="Normal vector to plane alignment" width="300">
+  <img src="img/parallel_planes.png" alt="Normal vector to plane alignment" width="300">
   &nbsp;&nbsp;&nbsp;
-  <img src="artificial_plane.png" alt="Artificial point cloud plane" width="300">
+  <img src="img/artificial_plane.png" alt="Artificial point cloud plane" width="300">
 </p>
 
 <p align="center">
@@ -166,7 +166,7 @@ The final transformation rTc is estimated using a **nonlinear least-squares solv
 The estimated marker center lies within a 2 mm radius from the ideal location in most trials:
 
 <p align="center">
-  <img src="bull_eye.png" alt="Accuracy of calibration points" width="250">
+  <img src="img/bull_eye.png" alt="Accuracy of calibration points" width="250">
 </p>
 
 <p align="center">
@@ -178,7 +178,7 @@ The estimated marker center lies within a 2 mm radius from the ideal location 
 Below is the trend of the squared residual norm as a function of the number of calibration poses:
 
 <p align="center">
-  <img src="LSQ.jpg" alt="LSQ residual trend" width="400">
+  <img src="img/LSQ.jpg" alt="LSQ residual trend" width="400">
 </p>
 
 <p align="center">
