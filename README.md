@@ -1,6 +1,6 @@
 # Demos <br>
 ## 🎬 Demo Gallery – Project Videos and Animations <br>
-This directory contains videos and GIFs that illustrate the key behaviours of each research prototype.  Use the overview below to locate the material you’re interested in. <br>
+This directory contains videos, GIFs, and codes that illustrate the key behaviours of each research prototype.  Use the overview below to locate the material you’re interested in. <br>
 **Note&nbsp;🛈**  <br>
 This repository does **not** yet contain every project in my research. Several works are still in active development, under institutional review, or pending publication.  
 They will be added here once they are finalized and cleared for open release.
