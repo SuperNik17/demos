@@ -12,7 +12,7 @@ The system supports both **real-world experiments** and **Ignition Gazebo simula
 - Evaluate performance through **tracking accuracy**, **network latency**, and **controller comparisons** (PID vs SMC).
 
 <p align="center">
-  <img src="project_frames.png" alt="Controlled Parameters" width="400"/>
+  <img src="img/project_frames.png" alt="Controlled Parameters" width="400"/>
 </p>
 <p align="center"><em>Reference frames of the leader and follower robots, with the controlled distance <strong>d</strong> and angle <strong>α</strong>.</em></p>
 
@@ -36,7 +36,7 @@ The system supports both **real-world experiments** and **Ignition Gazebo simula
 ## 🧪 Experimental Validation
 
 <p align="center">
-  <img src="controller_turtle4.png" alt="Feedback Control" width="400"/>
+  <img src="img/controller_turtle4.png" alt="Feedback Control" width="400"/>
 </p>
 <p align="center"><em>Feedback control scheme regulating the follower's velocity based on the measured distance error.</em></p>
 
@@ -51,14 +51,14 @@ The system supports both **real-world experiments** and **Ignition Gazebo simula
 | Std Deviation (m) | 0.025          | 0.032              |
 
 <p align="center">
-  <img src="./traj_chasing.gif" alt="Chasing Test Animation" width="400"/>
+  <img src="img/traj_chasing.gif" alt="Chasing Test Animation" width="400"/>
 </p>
 <p align="center"><em>Animation showing the leader–follower behavior during the Chasing Test.</em></p>
 
 
 
 <p align="center">
-  <img src="chasing_test_result.png" alt="Chasing Test" width="400"/>
+  <img src="img/chasing_test_result.png" alt="Chasing Test" width="400"/>
 </p>
 <p align="center"><em>Trajectory tracking of the leader and follower robots during the Chasing Test.</em></p>
 ---
@@ -82,14 +82,14 @@ The system supports both **real-world experiments** and **Ignition Gazebo simula
 | Std Deviation (m/s) | 0.006         |
 
 <p align="center">
-  <img src="./law_motion.gif" alt="Law of Motion Test Animation" width="400"/>
+  <img src="img/law_motion.gif" alt="Law of Motion Test Animation" width="400"/>
 </p>
 <p align="center"><em>Animation showing the leader and follower velocity synchronization during the Law of Motion Test.</em></p>
 
 
 
 <p align="center">
-  <img src="smc_law_motion_results.png" alt="Law of Motion" width="400"/>
+  <img src="img/smc_law_motion_results.png" alt="Law of Motion" width="400"/>
 </p>
 <p align="center"><em>Velocity tracking of the leader and follower robots using Sliding Mode Control (SMC) during the Law of Motion Test.</em></p>
 
@@ -116,13 +116,13 @@ The system supports both **real-world experiments** and **Ignition Gazebo simula
 | Std Deviation (m) | 0.021          |
 
 <p align="center">
-  <img src="./obs_avoid.gif" alt="Obstacle Avoidance Animation" width="400"/>
+  <img src="img/obs_avoid.gif" alt="Obstacle Avoidance Animation" width="400"/>
 </p>
 <p align="center"><em>Animation showing the collaborative obstacle avoidance behavior between leader and follower robots.</em></p>
 
 
 <p align="center">
-  <img src="obstacle_avoidance_result.png" alt="Obstacle Avoidance" width="400"/>
+  <img src="img/obstacle_avoidance_result.png" alt="Obstacle Avoidance" width="400"/>
 </p>
 <p align="center"><em>Trajectory of the leader and follower robots during the Obstacle Avoidance Test with dynamic obstacle detection.</em></p>
 
