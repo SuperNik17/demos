@@ -18,7 +18,7 @@ The H∞ controller is designed to **minimize the worst-case amplification** of 
 This is achieved through an optimization process based on **Linear Matrix Inequalities (LMIs)**, ensuring both stability and performance.
 
 <p align="center">
-  <img src="controller_diagram2.png" alt="Controller Block Diagram" width="600"/>
+  <img src="img/controller_diagram2.png" alt="Controller Block Diagram" width="600"/>
 </p>
 <p align="center"><em>Block diagram of the control system, including inverse kinematics, feedforward and feedback components.</em></p>
 
@@ -27,14 +27,14 @@ This is achieved through an optimization process based on **Linear Matrix Inequa
 The proposed controller has been validated on a **TurtleBot3 Waffle Pi** using **ROS 2**.  
 Experiments involved tracking a figure-eight (∞) trajectory in an indoor environment with sensor noise and external disturbances.
 <p align="center">
-  <img src="h_inf_setup_short.gif" alt="Setup" width="700"/>
+  <img src="img/h_inf_setup_short.gif" alt="Setup" width="700"/>
 </p>
 <p align="center"><em>The real-world testbed.</em></p>
 
 The localization system is based on the Marvelmind Indoor "GPS" beacons, connected via an Arduino board to ROS 2.  
 The setup includes serial communication publishing position data as ROS topics.
 <p align="center">
-  <img src="localization_setup.png" alt="Localization Setup" width="700"/>
+  <img src="img/localization_setup.png" alt="Localization Setup" width="700"/>
 </p>
 <p align="center"><em>Localization system architecture using Marvelmind and ROS 2.</em></p>
 
@@ -49,12 +49,12 @@ The setup includes serial communication publishing position data as ROS topics.
 
 
 <p align="center">
-  <img src="exp_trajpng.png" alt="Experimental Trajectory Tracking" width="600"/>
+  <img src="img/exp_trajpng.png" alt="Experimental Trajectory Tracking" width="600"/>
 </p>
 <p align="center"><em>Experimental trajectory tracking performance for different controllers.</em></p>
 
 <p align="center">
-  <img src="wheel_speeds.png" alt="Wheel Speeds Comparison" width="600"/>
+  <img src="img/wheel_speeds.png" alt="Wheel Speeds Comparison" width="600"/>
 </p>
 <p align="center"><em>Comparison of wheel speeds for feedforward and feedback control components.</em></p>
 
