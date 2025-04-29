@@ -15,6 +15,7 @@ Each script corresponds to a well-defined step of the pipeline.
 | 4️⃣ | `4extractCenterByFitting.m` | Align experimental marker clouds with a CAD model via plane fitting and ICP registration; estimate marker centers |
 | 5️⃣ | `5optimizeTransformationMatrix.m` | Estimate the rigid-body transformation (rotation + translation) between camera frame and robot frame using least squares optimization |
 | 6️⃣ | `computeResidualNorm.m` | Calculate the residuals between estimated and actual marker positions and evaluate the calibration accuracy |
+| 7️⃣ | `plane_fit.m` | Optimization function to best fit plane |
 
 ---
 
@@ -40,6 +41,12 @@ Each script corresponds to a well-defined step of the pipeline.
 - Estimates a common plane from the experimental clouds.
 - Projects experimental points onto the plane and aligns them with the model using ICP.
 - Calculates marker centers both geometrically (via ICP) and statistically (mean position).
+
+#### 🛠️ plane_fit.m
+- Fits a plane to a set of 3D points.
+- Can optionally constrain the normal vector if known.
+- Used internally in `extractCenterByFitting.m` to compute the best-fit common plane.
+
 
 ### 5️⃣ optimizeTransformationMatrix.m
 - Sets up a least-squares problem to estimate the transformation matrix between camera and robot frames.
