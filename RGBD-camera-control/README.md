@@ -45,7 +45,7 @@ This project demonstrates how to use an RGB-D camera to measure and control the 
 - Compute Euclidean distance from initial reference or between two markers
 
 <p align="center">
-  <img src="img/marker2markless.png" alt="Marker and Markerless Setup" width="600"/>
+  <img src="img/marker2markless2.png" alt="Marker and Markerless Setup" width="600"/>
 </p>
 <p align="center"><em>Examples of red marker, red+blue marker, and no marker (markerless) setups.</em></p>
 
