@@ -154,7 +154,7 @@ A cylinder fitting algorithm is applied to the 3D point cloud representing the a
 RGBD-camera-control/
 ├── Linear Actuator control by RGBD Camera/
 │   ├── src/                   # Code (MATLAB/Python)
-│   ├── docs/                  # Diagrams, images, videos
+│   ├── img/                  # Diagrams, images, videos
 │   └── README.md              # Project description
 ```
 
