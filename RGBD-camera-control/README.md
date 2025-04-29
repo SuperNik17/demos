@@ -97,16 +97,27 @@ A cylinder fitting algorithm is applied to the 3D point cloud representing the a
 </p>
 <p align="center"><em>Simulink control architecture for the ball stabilization task.</em></p>
 
+<!-- Zero Point Controller - Base -->
 <p align="center">
+  <img src="img/zero_point_pi_150_2.gif" width="400"/>
   <img src="img/zero_point_control_pi_150_2.png" width="400"/>
+</p>
+<p align="center"><em>Standard PI control with K<sub>p</sub>=150 and K<sub>i</sub>=2.</em></p>
+
+<!-- Zero Point Controller - Attenuation -->
+<p align="center">
+  <img src="img/zero_point_attenuation_pi_150_2.gif" width="400"/>
   <img src="img/zero_point_controller_attenuation_pi_150_2.png" width="400"/>
 </p>
-<p align="center"><em>Stabilization error to the reference over time for different controller setups.</em></p>
+<p align="center"><em>Control with output attenuation (0.09 factor).</em></p>
 
+<!-- Zero Point Controller - Extra Attenuation -->
 <p align="center">
+  <img src="img/zero_point_attenuation_008_pi_150_2.gif" width="400"/>
   <img src="img/zero_point_controller_attenuation008_pi_150_2.png" width="400"/>
 </p>
-<p align="center"><em>Smoothed response using additional attenuation.</em></p>
+<p align="center"><em>Smoothed control response using attenuation factor 0.08.</em></p>
+
 
 🎥 Additional video demos:
 - `docs/zero_point_attenuation_008_pi_150_2.MOV`
