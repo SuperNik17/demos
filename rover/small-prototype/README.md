@@ -5,9 +5,9 @@ Early experiments carried out on a rocker‑bogie rover, 3D‑printed in PLA and
 
 <!--![Small prototype](small_prototype.png)-->
 <p align="center">
-  <img src="small_prototype.png" alt="Small size prototype rover" width="300">
+  <img src="img/small_prototype.png" alt="Small size prototype rover" width="300">
   &nbsp;&nbsp;&nbsp;
-  <img src="small_rover_architecture.png" alt="Prototype architecture diagram" width="300">
+  <img src="img/small_rover_architecture.png" alt="Prototype architecture diagram" width="300">
 </p>
 
 <p align="center">
@@ -44,9 +44,9 @@ All experiments on the small‑scale prototype were carried out **indoors** at t
 | **Communication ports** | I²C between Arduino and Motor Shield; Wi‑Fi 802.11 b/g/n for both TCP and UDP links. |
 
 <p align="center">
-  <img src="Osoyo_app.png"  alt="Osoyoo Wi‑Fi Robot app" width="220">
+  <img src="img/Osoyo_app.png"  alt="Osoyoo Wi‑Fi Robot app" width="220">
   &nbsp;&nbsp;&nbsp; <!-- space in the pics -->
-  <img src="web_server.png" alt="On‑board web‑server GUI" width="260">
+  <img src="img/web_server.png" alt="On‑board web‑server GUI" width="260">
 </p>
 <p align="center">
   <sub><sup>
@@ -58,8 +58,8 @@ All experiments on the small‑scale prototype were carried out **indoors** at t
 ## 🖥️ Simulation model
 
 <p align="center">
-  <img src="simscape_layout.png" alt="Simscape Multibody schematic" width="300">
-  <img src="simscape_model.png"    alt="3‑D simulation model"     width="300">
+  <img src="img/simscape_layout.png" alt="Simscape Multibody schematic" width="300">
+  <img src="img/simscape_model.png"    alt="3‑D simulation model"     width="300">
 </p>
 
 <p align="center">
@@ -71,10 +71,10 @@ All experiments on the small‑scale prototype were carried out **indoors** at t
 ## 🧪 Simulation Tests
 
 1. **Straightforward motion**
-   <p align="center"> <img src="line_forward.gif" alt="Straight movement test in Simscape" width="600"> </p> <p align="center"> <sub><sup> Simulation of the rover moving over flat terrain with passive suspension 
+   <p align="center"> <img src="img/line_forward.gif" alt="Straight movement test in Simscape" width="600"> </p> <p align="center"> <sub><sup> Simulation of the rover moving over flat terrain with passive suspension 
     dynamics. </sup></sub> </p>
 2. **Obstacle interaction**
-   <p align="center"> <img src="no_crossing.gif" alt="Obstacle test - side view" width="300"> &nbsp;&nbsp;&nbsp; <img src="crossing.gif" alt="Obstacle test - front view" width="300"> </p> <p align="center"> 
+   <p align="center"> <img src="img/no_crossing.gif" alt="Obstacle test - side view" width="300"> &nbsp;&nbsp;&nbsp; <img src="crossing.gif" alt="Obstacle test - front view" width="300"> </p> <p align="center"> 
    <sub><sup> Comparison of obstacle-crossing performance under identical initial conditions. <strong>Left:</strong> Side view • <strong>Right:</strong> Front view </sup></sub> </p>
 
 ---
