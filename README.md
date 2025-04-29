@@ -15,6 +15,7 @@ They will be added here once they are finalized and cleared for open release.
 
 ## 📝 README in each sub‑folder <br>
 Every project folder includes a README.md that lists: <br>
+- :codes: 
 - available clips and a brief description ⚡️ <br>
 - hardware / software setup (robot, sensors, environment) 🛠️ <br>
 
