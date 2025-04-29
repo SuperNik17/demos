@@ -82,7 +82,7 @@ A cylinder fitting algorithm is applied to the 3D point cloud representing the a
 - Closed-loop control via Simulink
 
 <p align="center">
-  <img src="img/chasing_target.gif" width="500" controls>
+  <img src="img/chasing_target.gif" width="200" controls>
   </img>
 </p>
 <p align="center"><em>Closed-loop control test to chase a red target using vision feedback.</em></p>
