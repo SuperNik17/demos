@@ -119,11 +119,6 @@ A cylinder fitting algorithm is applied to the 3D point cloud representing the a
 <p align="center"><em>Smoothed control response using attenuation factor 0.08.</em></p>
 
 
-🎥 Additional video demos:
-- `docs/zero_point_attenuation_008_pi_150_2.MOV`
-- `docs/zero_point_attenuation_pi_150_2.mp4`
-- `docs/zero_point_pi_150_2.MOV`
-
 ---
 
 ## 📊 Test Results Summary
