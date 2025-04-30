@@ -174,5 +174,5 @@ If you use this work, cite:
 
 ---
 
-👨‍💻 Developed as part of Armando Nicolella's MSc Thesis @ Università degli Studi di Napoli Federico II
+👨‍💻 Developed as part of my MSc Thesis @ Università degli Studi di Napoli Federico II
 
