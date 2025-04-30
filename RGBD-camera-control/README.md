@@ -106,7 +106,7 @@ A cylinder fitting algorithm is applied to the 3D point cloud representing the a
 
 <!-- Zero Point Controller - Attenuation -->
 <p align="center">
-  <img src="img/zero_point_attenuation_pi_150_2.gif" width="400"/>
+  <img src="img/zero_point_attenuation_pi_150_2.gif" width="266"/>
   <img src="img/zero_point_controller_attenuation_pi_150_2.png" width="400"/>
 </p>
 <p align="center"><em>Control with output attenuation (0.09 factor).</em></p>
