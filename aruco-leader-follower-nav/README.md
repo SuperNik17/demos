@@ -128,16 +128,8 @@ The system supports both **real-world experiments** and **Ignition Gazebo simula
 
 ---
 
-
-
-
-
----
-
 ## 📂 Repository Structure
 This repository includes:
-- Simulation launch files.
-- Real-world launch files.
 - ROS 2 nodes for:
   - ArUco detection
   - Leader-follower control (PID and SMC)
