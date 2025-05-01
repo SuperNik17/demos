@@ -159,16 +159,25 @@ RGBD-camera-control/
 If you use this work, cite:
 
 ```
-@article{nicolella_rgbd_2021,
-  title={Mechanical System Control by RGB-D Device},
+@article{cosenza2020mechanical,
+  title={Mechanical system control by RGB-D device},
   author={Cosenza, Chiara and Nicolella, Armando and Esposito, Daniele and Niola, Vincenzo and Savino, Sergio},
   journal={Machines},
   volume={9},
   number={1},
   pages={3},
-  year={2021},
-  publisher={MDPI},
-  doi={10.3390/machines9010003}
+  year={2020},
+  publisher={MDPI}
+}
+```
+```
+@inproceedings{cosenza2020rgb,
+  title={RGB-D vision device for tracking a moving target},
+  author={Cosenza, Chiara and Nicolella, Armando and Niola, Vincenzo and Savino, Sergio},
+  booktitle={The International Conference of IFToMM ITALY},
+  pages={841--848},
+  year={2020},
+  organization={Springer}
 }
 ```
 
