@@ -71,6 +71,7 @@ Ensure correct calibration of RGB-D camera for accurate measurements.
 ## 📚 Citation
 If you use this code, please cite:
 
+```
 @article{cosenza2020mechanical,
   title={Mechanical system control by RGB-D device},
   author={Cosenza, Chiara and Nicolella, Armando and Esposito, Daniele and Niola, Vincenzo and Savino, Sergio},
@@ -81,4 +82,16 @@ If you use this code, please cite:
   year={2020},
   publisher={MDPI}
 }
+```
+```
+@inproceedings{cosenza2020rgb,
+  title={RGB-D vision device for tracking a moving target},
+  author={Cosenza, Chiara and Nicolella, Armando and Niola, Vincenzo and Savino, Sergio},
+  booktitle={The International Conference of IFToMM ITALY},
+  pages={841--848},
+  year={2020},
+  organization={Springer}
+}
+```
 
+👨‍💻 Developed as part of MSc Thesis @ Università degli Studi di Napoli Federico II
