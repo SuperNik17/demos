@@ -173,4 +173,4 @@ ros2 run turtlebot_pkg move_doc_rob_intorno_ostacolo
 
 ## 👨‍🔬 Credits
 
-Developed at the **Robotics Lab** — University of Armando Nicolella and Pasquale Stingo
+Developed at the **LAM4R** — University of Armando Nicolella and Pasquale Stingo
