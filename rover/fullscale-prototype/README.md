@@ -1,9 +1,9 @@
-# 🚀 Full-Scale Rover Prototype
+#  Full-Scale Rover Prototype
 
 This section presents the development and structure of the **full-scale rocker-bogie rover**, designed to validate kinematic behaviors, mechanical stability, and terrain-interaction capabilities at real-world dimensions. It follows the initial proof-of-concept developed with the small-scale rover.
 
 ---
-## 🖼️ From CAD to Reality
+##  From CAD to Reality
 
 <p align="center">
   <img src="img/fullscale_prototype.png" alt="Final prototype - physical rover" width="360">
@@ -20,7 +20,7 @@ This section presents the development and structure of the **full-scale rocker-b
 
 
 
-## 📐 Mechanical Architecture
+##  Mechanical Architecture
 
 <p align="center">
   <img src="img/lateral_fullscale_proto.png" alt="Side view with dimensions" width="420">
@@ -44,7 +44,7 @@ This section presents the development and structure of the **full-scale rocker-b
 - Passive rocker-bogie suspension
 - Motor mounts and sensors still under integration
 
-## ⚙️ Motor & Driver Specs
+##  Motor & Driver Specs
 
 The full-scale rover uses brushless DC motors controlled by **Stepdriver DBLS‑01S** motor drivers, capable of PID regulation. Below are the key specs:
 
@@ -62,11 +62,11 @@ The full-scale rover uses brushless DC motors controlled by **Stepdriver DBLS‑
 | Stall Torque           | 0.8 N·m                |
 | PID Gains              | Kₚ = 20, Kᵢ = 10       |
 
-🔋 Drivers support multiple input voltages (24 V, 36 V, 48 V), with reduced current draw as voltage increases.  
+ Drivers support multiple input voltages (24 V, 36 V, 48 V), with reduced current draw as voltage increases.  
 In this configuration, the system runs at 36 V DC.
 
 
-## 🛠️ Configuration Comparison
+##  Configuration Comparison
 
 During the construction process, two different wheel configurations were considered:
 
@@ -88,7 +88,7 @@ During the construction process, two different wheel configurations were conside
 
 
 
-## 📍 Notes
+##  Notes
 
 - The structure has been dimensioned to accommodate onboard sensors, motor drivers, and computing units.  
 - Cable routing and protection channels are integrated along the frame.
