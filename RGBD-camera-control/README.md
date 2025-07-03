@@ -1,10 +1,10 @@
-# 🧠 RGB-D Camera Controlled Linear Actuator
+#  RGB-D Camera Controlled Linear Actuator
 
 This project demonstrates how to use an RGB-D camera to measure and control the position of a linear actuator in a completely contactless fashion. The actuator is controlled in closed-loop using only computer vision feedback. The approach leverages both color segmentation and point-cloud geometry to track motion and enable basic mechanical system control.
 
 ---
 
-## 🌟 Key Goals
+##  Key Goals
 
 - Measure actuator displacement using **depth cameras** (no encoders or potentiometers)
 - Implement **vision-based control** for:
@@ -13,7 +13,7 @@ This project demonstrates how to use an RGB-D camera to measure and control the 
 
 ---
 
-## ⚙️ Hardware Setup
+##  Hardware Setup
 
 | Component                    | Description                                      |
 |-----------------------------|--------------------------------------------------|
@@ -31,14 +31,14 @@ This project demonstrates how to use an RGB-D camera to measure and control the 
 
 ---
 
-## 🛠️ Software Stack
+##  Software Stack
 
 - **Vision processing**: depth stream acquisition, segmentation, and point-cloud geometry
 - **Control loop**: implemented in MATLAB/Simulink for closed-loop actuation
 
 ---
 
-## 🔍 Measurement Techniques
+##  Measurement Techniques
 
 ### 1. Marker-Based
 - Color segmentation to detect red or blue markers
@@ -74,9 +74,9 @@ A cylinder fitting algorithm is applied to the 3D point cloud representing the a
 
 ---
 
-## 🎮 Control Applications
+##  Control Applications
 
-### 🔴 Target Tracking ("Hit Red")
+###  Target Tracking ("Hit Red")
 - Detect red marker or object
 - Compute 3D position via RGB-D
 - Closed-loop control via Simulink
@@ -87,7 +87,7 @@ A cylinder fitting algorithm is applied to the 3D point cloud representing the a
 </p>
 <p align="center"><em>Closed-loop control test to chase a red target using vision feedback.</em></p>
 
-### ⚖️ Ball Stabilization ("Ball Control")
+###  Ball Stabilization ("Ball Control")
 - Detect red ball via color + geometry
 - Control actuator to hold it still at desired point
 - Gain tuning: `Kp = 150`, `Ki = 2`, attenuation: `0.1 → 0.09 → 0.08`
@@ -121,7 +121,7 @@ A cylinder fitting algorithm is applied to the 3D point cloud representing the a
 
 ---
 
-## 📊 Test Results Summary
+##  Test Results Summary
 
 | Test Type           | Kinect                   | RealSense                |
 |---------------------|--------------------------|--------------------------|
@@ -143,7 +143,7 @@ A cylinder fitting algorithm is applied to the 3D point cloud representing the a
 
 ---
 
-## 📂 Repository Structure
+##  Repository Structure
 
 ```
 RGBD-camera-control/
@@ -155,7 +155,7 @@ RGBD-camera-control/
 
 ---
 
-## 🧠 Citation
+##  Citation
 If you use this work, cite:
 
 ```
@@ -183,5 +183,5 @@ If you use this work, cite:
 
 ---
 
-👨‍💻 Developed as part of my MSc Thesis @ Università degli Studi di Napoli Federico II
+ Developed as part of my MSc Thesis @ Università degli Studi di Napoli Federico II
 
