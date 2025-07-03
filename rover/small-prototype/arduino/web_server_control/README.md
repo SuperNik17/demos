@@ -14,12 +14,12 @@ It initializes all components (WiFi, IMU, MotorShields, SD), hosts the web inter
 
 ##  Features
 
-- 📶 Wi-Fi Access Point mode using `WiFiNINA` or compatible interface
-- 🌐 Embedded HTTP server to serve control UI (buttons + velocity input)
-- ⛓️ Fully functional directional control (8 directions + Stop)
-- 🎯 Real-time pitch/roll/yaw tracking via Kalman Filter
-- 💾 IMU data logging to SD card or Serial
-- 📱 Web UI optimized for smartphone control
+-  Wi-Fi Access Point mode using `WiFiNINA` or compatible interface
+-  Embedded HTTP server to serve control UI (buttons + velocity input)
+-  Fully functional directional control (8 directions + Stop)
+-  Real-time pitch/roll/yaw tracking via Kalman Filter
+-  IMU data logging to SD card or Serial
+-  Web UI optimized for smartphone control
 
 
 
