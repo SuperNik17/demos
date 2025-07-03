@@ -1,10 +1,10 @@
-# 🐢 ROS 2 TurtleBot Follower Experiments
+# ROS 2 TurtleBot Follower Experiments
 
 This project contains a set of Python scripts for ROS 2 that enable a **follower** robot to track a **leader** robot, both in real-world experiments and in Gazebo simulation. Obstacle avoidance and advanced control strategies (PID, Sliding Mode) are also included.
 
 ---
 
-## 🔽 Clone this Repository
+##  Clone this Repository
 
 To get started, clone the project from GitHub:
 
@@ -15,7 +15,7 @@ cd demos/aruco-leader-follower-nav/src/
 
 ---
 
-## 📦 Dependencies
+##  Dependencies
 
 Before running the nodes, make sure you have the following installed:
 
@@ -39,7 +39,7 @@ source install/setup.bash
 
 ---
 
-## 📁 Initial Setup
+##  Initial Setup
 
 Make sure you are inside your ROS 2 workspace and source the environment:
 
@@ -50,7 +50,7 @@ source install/setup.bash
 
 ---
 
-## 🔬 Real-World Following
+##  Real-World Following
 
 1. **Publish the pose of the ArUco marker** (leader):
 ```bash
@@ -76,7 +76,7 @@ ros2 run turtlebot_pkg move_forward
 
 ---
 
-## 🧱 Real-World Obstacle Avoidance (Experimental)
+##  Real-World Obstacle Avoidance (Experimental)
 
 1. Launch the ArUco node to get the leader pose:
 ```bash
@@ -97,7 +97,7 @@ ros2 run turtlebot_pkg move_doc_rob_intorno_ostacolo
 
 ---
 
-## 🧪 Gazebo Simulation – Following
+##  Gazebo Simulation – Following
 
 1. Launch the two TurtleBots in Gazebo:
 ```bash
@@ -105,7 +105,7 @@ ros2 launch turtlebot4_ignition_bringup turtlebot4_ignition.launch.py namespace:
 ros2 launch turtlebot4_ignition_bringup turtlebot4_spawn.launch.py namespace:=tes_robolab x:=0.0 y:=-1.0 yaw:=0
 ```
 
-> 🔧 Make sure Gazebo is running correctly (use the NVIDIA GPU if needed — if CPU usage stays stuck at 30%, there’s a problem).
+>  Make sure Gazebo is running correctly (use the NVIDIA GPU if needed — if CPU usage stays stuck at 30%, there’s a problem).
 
 2. Then, from <ros2_workspace>:
 
@@ -126,7 +126,7 @@ ros2 run turtlebot_pkg gazebo_sim3
 
 ---
 
-## 🧱 Gazebo Simulation – Obstacle Avoidance
+##  Gazebo Simulation – Obstacle Avoidance
 
 1. Launch the robots in Gazebo as shown above.
 
@@ -154,7 +154,7 @@ ros2 run turtlebot_pkg move_doc_rob_intorno_ostacolo
 
 ---
 
-## ℹ️ Important Notes
+##  Important Notes
 
 - Always `source install/setup.bash` in each terminal.
 - Run each node in a separate terminal.
@@ -162,7 +162,7 @@ ros2 run turtlebot_pkg move_doc_rob_intorno_ostacolo
 
 ---
 
-## ✅ Requirements Summary
+##  Requirements Summary
 
 - ROS 2 Humble
 - Gazebo Ignition
@@ -171,6 +171,6 @@ ros2 run turtlebot_pkg move_doc_rob_intorno_ostacolo
 
 ---
 
-## 👨‍🔬 Credits
+##  Credits
 
 Developed at the **LAM4R** — University of Armando Nicolella and Pasquale Stingo
