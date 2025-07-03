@@ -7,7 +7,7 @@
 > October – November 2023  
 
 
-## 🚀  Project goal  
+##   Project goal  
 During a visiting period at UniUD we designed and field-tested a LiDAR-only autonomous-navigation pipeline aimed at coordinating multiple **AGILEX Scout Mini** robots. Key elements:
 
 * Real-time odometry pose estimation with **Direct LiDAR Odometry** (DLO)
@@ -24,13 +24,13 @@ During a visiting period at UniUD we designed and field-tested a LiDAR-only auto
 </div>
 
 
-## 🛠️  Hardware 
+##   Hardware 
 * **Robot:** AGILEX Scout Mini with CAN/USB interface  
 * **Sensor:** Velodyne VLP-16 (16-beam LiDAR)  
 * **Onboard Compute:** NVIDIA Jetson Xavier AGX (CUDA 11)  
 * **Networking:** on-board Wi-Fi routers; single LAN for multi-robot (master acts as AP, slave as client)
 
-## 🧩  Logical architecture
+##   Logical architecture
 LiDAR → DLO → {  (1) GMapping → /map
                   (2) pre-map + AMCL → /map } → Move Base → cmd_vel
 
@@ -38,7 +38,7 @@ LiDAR → DLO → {  (1) GMapping → /map
 * **Multi-robot:** master runs (1); slave receives the shared map, localises with AMCL and tracks the master’s way-points.
 <div align="center">
 
-### 🤖 Single-Agent Setup – Hardware Architecture
+###  Single-Agent Setup – Hardware Architecture
 
 ![Single Agent Hardware](img/single_agent_hardware_arch.png)
 
@@ -46,7 +46,7 @@ LiDAR → DLO → {  (1) GMapping → /map
 
 
 
-### 🤖 Single-Agent – ROS Architecture
+###  Single-Agent – ROS Architecture
 
 ![Single Agent ROS](img/single_agent_rosarch2.png)
 
@@ -54,7 +54,7 @@ LiDAR → DLO → {  (1) GMapping → /map
 
 
 
-### 🤖🤖 Multi-Agent Setup – Hardware Architecture
+###  Multi-Agent Setup – Hardware Architecture
 
 ![Multi Agent Hardware](img/multi_agent_hardware_arch.png)
 
@@ -62,7 +62,7 @@ LiDAR → DLO → {  (1) GMapping → /map
 
 
 
-### 🤖🤖 Multi-Agent – ROS Architecture
+###  Multi-Agent – ROS Architecture
 
 ![Multi Agent ROS](img/multi_agent_ros_arch2.png)
 
@@ -70,7 +70,7 @@ LiDAR → DLO → {  (1) GMapping → /map
 
 </div>
 
-## 📊  Results & open issues
+##   Results & open issues
 * **Accuracy:** DLO + AMCL < 5 cm on 20 m indoor loop.  
 * **Drift:** without AMCL, visible (> 0.5 m) after ~10 min continuous run.  
 * **Swarm:** slave localisation still sensitive to sharp turns; considering map-merge (`multirobot_map_merge`) for extra robustness.
@@ -93,13 +93,13 @@ LiDAR → DLO → {  (1) GMapping → /map
 
 </div>
 
-## 🔭  Next steps
+##   Next steps
 * Cross-calibration of maps between robots  
 * Heuristic multi-robot map-merge  
 * Integrate IMU in DLO loop to cut residual drift  
 * Outdoor field trials
 
 
-## 🙏  Acknowledgements
+##   Acknowledgements
 * Mechatronics and Robotics Lab, University of Udine, for workspace and support  
 * Diego Tiozzo Fasiolo for his help  

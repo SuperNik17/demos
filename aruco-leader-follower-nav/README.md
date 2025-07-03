@@ -1,11 +1,11 @@
-# 👨‍💻 ArUco-Based Leader–Follower Navigation with TurtleBot 4
+#  ArUco-Based Leader–Follower Navigation with TurtleBot 4
 
-## 📚 Overview
+##  Overview
 This project implements a **leader–follower navigation strategy** for mobile robots using **ROS 2** and **TurtleBot 4** platforms.  
 A **leader robot** is tracked by a **follower robot** through **visual detection** of an **ArUco marker** mounted on the leader, using an onboard **Intel RealSense D435i RGB-D camera**.  
 The system supports both **real-world experiments** and **Ignition Gazebo simulations**, including **dynamic obstacle avoidance** and **collaborative navigation**.
 
-## 🎯 Project Goals
+##  Project Goals
 - Develop a **robust leader–follower strategy** using vision-based pose estimation.
 - Validate the system both **in simulation** and **in real-world testing**.
 - Implement **cooperative obstacle avoidance** strategies between leader and follower.
@@ -16,7 +16,7 @@ The system supports both **real-world experiments** and **Ignition Gazebo simula
 </p>
 <p align="center"><em>Reference frames of the leader and follower robots, with the controlled distance <strong>d</strong> and angle <strong>α</strong>.</em></p>
 
-## ✨ Key Features
+##  Key Features
 - **Leader–Follower System** based on ArUco visual tracking.
 - **Multi-Level Testing** including dynamic following, motion law emulation, and obstacle avoidance.
 - **Dual Control Strategies**: PID and SMC.
@@ -24,7 +24,7 @@ The system supports both **real-world experiments** and **Ignition Gazebo simula
 - **Collaborative Obstacle Avoidance**.
 - **Full ROS 2 Integration** leveraging DDS communication.
 
-## 🛠️ Technologies Used
+##  Technologies Used
 - TurtleBot 4 (iRobot Create 3 + Raspberry Pi 4)
 - Intel RealSense D435i (RGB-D Camera)
 - RPLIDAR A1M8 (2D LiDAR)
@@ -33,7 +33,7 @@ The system supports both **real-world experiments** and **Ignition Gazebo simula
 - Ignition Gazebo (for simulation)
 - RViz2 (for visualization)
 
-## 🧪 Experimental Validation
+##  Experimental Validation
 
 <p align="center">
   <img src="img/controller_turtle4.png" alt="Feedback Control" width="400"/>
@@ -42,7 +42,7 @@ The system supports both **real-world experiments** and **Ignition Gazebo simula
 
 
 
-### 📍 Chasing Test Results
+###  Chasing Test Results
 | Metric        | Gazebo Simulation | Real-World Testing |
 |---------------|-------------------|--------------------|
 | MAE (m)       | 0.026              | 0.031              |
@@ -63,7 +63,7 @@ The system supports both **real-world experiments** and **Ignition Gazebo simula
 <p align="center"><em>Trajectory tracking of the leader and follower robots during the Chasing Test.</em></p>
 ---
 
-### 📍 Law of Motion Test Results (PID Control)
+###  Law of Motion Test Results (PID Control)
 | Metric        | Gazebo Simulation | Real-World Testing |
 |---------------|-------------------|--------------------|
 | MAE (m/s)     | 0.013              | 0.014              |
@@ -73,7 +73,7 @@ The system supports both **real-world experiments** and **Ignition Gazebo simula
 
 
 
-### 📍 Law of Motion Test Results (SMC Control)
+###  Law of Motion Test Results (SMC Control)
 | Metric        | Real-World Testing |
 |---------------|--------------------|
 | MAE (m/s)     | 0.007              |
@@ -96,7 +96,7 @@ The system supports both **real-world experiments** and **Ignition Gazebo simula
 
 
 
-### 📍 PID vs SMC Comparison
+###  PID vs SMC Comparison
 | Controller | MAE (m/s) | RMSE (m/s) | Notes |
 |------------|-----------|------------|-------|
 | PID        | 0.014     | 0.017      | Higher oscillations |
@@ -108,7 +108,7 @@ The system supports both **real-world experiments** and **Ignition Gazebo simula
 
 ---
 
-### 📍 Obstacle Avoidance Test Results
+###  Obstacle Avoidance Test Results
 | Metric        | Real-World Testing |
 |---------------|--------------------|
 | MAE (m)       | 0.022              |
@@ -128,7 +128,7 @@ The system supports both **real-world experiments** and **Ignition Gazebo simula
 
 ---
 
-## 📂 Repository Structure
+##  Repository Structure
 This repository includes:
 - ROS 2 nodes for:
   - ArUco detection

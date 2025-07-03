@@ -1,4 +1,4 @@
-# 🛰️ Custom Arduino Rover Control with IMU & Wi-Fi (OSOYOO App Integration)
+#  Custom Arduino Rover Control with IMU & Wi-Fi (OSOYOO App Integration)
 
 This Arduino project enables real-time control of a six-wheel rover equipped with IMU sensors, Wi-Fi connectivity, and motor drivers (Adafruit Motor Shields). The rover can be controlled remotely via the **OSOYOO Wi-Fi Robot Car App** or through a web interface.
 
@@ -11,7 +11,7 @@ The system implements:
 
 
 
-## 📂 File Structure
+##  File Structure
 
 | File | Description |
 |------|-------------|
@@ -21,13 +21,13 @@ The system implements:
 
 ---
 
-## 🚘 Features
+##  Features
 
-- 🧭 IMU-based orientation estimation (roll, pitch, yaw)
-- 📶 Wi-Fi AP Mode using `WiFiNINA` + `UDP` commands
-- ⚙️ Dual Adafruit Motor Shield support (I2C address selection)
-- 🧮 Skid steering and directional control
-- 💾 SD card logging (optional)
-- 📱 OSOYOO App compatibility
-- 🔧 Easily configurable for different
+-  IMU-based orientation estimation (roll, pitch, yaw)
+-  Wi-Fi AP Mode using `WiFiNINA` + `UDP` commands
+-  Dual Adafruit Motor Shield support (I2C address selection)
+-  Skid steering and directional control
+-  SD card logging (optional)
+-  OSOYOO App compatibility
+-  Easily configurable for different
 

@@ -1,4 +1,4 @@
-# 🛠️ Small‑Scale Rover Prototype – Demo Clips
+#  Small‑Scale Rover Prototype – Demo Clips
 Early experiments carried out on a rocker‑bogie rover, 3D‑printed in PLA and driven by 12 V gearmotors.  The platform was used to validate the multibody simulation model and basic control logic before committing to the full‑size build.
 
 ---
@@ -18,7 +18,7 @@ Early experiments carried out on a rocker‑bogie rover, 3D‑printed in PLA and
 
 
 
-## 🔧 Hardware setup
+##  Hardware setup
 | Component | Spec | 
 |-----------|-----------|
 | Dimensions (L × W × H)   | 272 × 251 × 150 mm (10.7 × 9.9 × 5.9 in)   | 
@@ -35,7 +35,7 @@ Early experiments carried out on a rocker‑bogie rover, 3D‑printed in PLA and
 ## Test environment  <br>
 All experiments on the small‑scale prototype were carried out **indoors** at the **LAM4R – Laboratory of Applied Mechanics for Robotics**, Department of Industrial Engineering, University of Naples Federico II.
 
-## 💻 Software setup for experimental setup
+##  Software setup for experimental setup
 | Layer / Tool | Details |
 |--------------|---------|
 | **Firmware** | Developed in the **Arduino IDE** (C++), using the official **Adafruit Motor Shield v2** library for TB6612 drivers. |
@@ -55,7 +55,7 @@ All experiments on the small‑scale prototype were carried out **indoors** at t
   </sup></sub>
 </p>
 
-## 🖥️ Simulation model
+##  Simulation model
 
 <p align="center">
   <img src="img/simscape_layout.png" alt="Simscape Multibody schematic" width="300">
@@ -68,7 +68,7 @@ All experiments on the small‑scale prototype were carried out **indoors** at t
   </sup></sub>
 </p>
 
-## 🧪 Simulation Tests
+##  Simulation Tests
 
 1. **Straightforward motion**
    <p align="center"> <img src="img/line_forward.gif" alt="Straight movement test in Simscape" width="600"> </p> <p align="center"> <sub><sup> Simulation of the rover moving over flat terrain with passive suspension 
@@ -79,7 +79,7 @@ All experiments on the small‑scale prototype were carried out **indoors** at t
 
 ---
 
-## 📄 Copyright & Acknowledgments
+##  Copyright & Acknowledgments
 Special thanks to Pierangelo Malfi for his significant contributions throughout the development of this project.
 We also extend our gratitude to the master's thesis students who collaborated on various aspects of the prototype's design and testing.<br>
 This material is shared for non-commercial and academic demonstration purposes only. All rights and intellectual property belong to the University of Naples Federico II – Department of Industrial Engineering. <br>
