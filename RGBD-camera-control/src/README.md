@@ -1,10 +1,10 @@
-# 🎯 RGB-D Vision-Based Control Scripts
+#  RGB-D Vision-Based Control Scripts
 
 This repository contains MATLAB scripts and Simulink models developed for vision-based closed-loop control using RGB-D cameras (RealSense D435) to track and stabilize the position of a red ball. The scripts are specifically designed for the project **"RGB-D Camera Controlled Linear Actuator."**
 
 ---
 
-## 🛠️ Code Description
+##  Code Description
 
 ### 1. `Ball_Red_Center_F.m`
 
@@ -46,7 +46,7 @@ This repository contains MATLAB scripts and Simulink models developed for vision
 
 ---
 
-## ⚙️ How to Run
+##  How to Run
 
 ### Initial Setup
 
@@ -63,12 +63,12 @@ align_to = realsense.stream.color;
 alignedFs = realsense.align(align_to);
 ```
 
-## 📌 Important Notes
+##  Important Notes
 Adjust ROI (rect) and sphere radius (r) parameters according to your experimental setup.  <br>
 Ensure correct calibration of RGB-D camera for accurate measurements.
 
 
-## 📚 Citation
+##  Citation
 If you use this code, please cite:
 
 ```
@@ -94,4 +94,4 @@ If you use this code, please cite:
 }
 ```
 
-👨‍💻 Developed as part of MSc Thesis @ Università degli Studi di Napoli Federico II
+ Developed as part of MSc Thesis @ Università degli Studi di Napoli Federico II
