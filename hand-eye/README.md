@@ -1,10 +1,10 @@
-# 🎯 Hand–Eye Calibration for Mobile Robot Manipulation
+#  Hand–Eye Calibration for Mobile Robot Manipulation
 
 This module presents a MATLAB-based implementation of a **marker-based hand–eye calibration** pipeline between an external camera and its end-effector, fundamental for **Position-Based Visual Servoing (PBVS)**. The system is designed to work with **unstructured fiducial markers** (such as custom patterns), offering flexibility across different platforms and camera models.
 
 ---
 
-## 🧠 Project Overview
+##  Project Overview
 The pipeline is designed for a **mobile robotic platform** equipped with a fixed onboard RGB-D camera. However, all current **experiments were performed off-board**, without an actual mobile base. The camera is positioned to capture both the **end-effector** and a portion of the **surrounding environment**, ensuring spatial observability for hand–eye calibration.
 
 - **Objective:** Estimate the transformation matrix `X` in the equation `AX = XB`
@@ -17,7 +17,7 @@ The pipeline is designed for a **mobile robotic platform** equipped with a fixed
 - **Use case:** Moving object in the robot workspace
 
 
-## 🖼️ System Architecture
+## System Architecture
 
 <p align="center">
   <img src="img/PBVS_servoing.png" alt="Frame composition diagram - Hand–Eye Calibration" width="500">
@@ -37,7 +37,7 @@ The pipeline is designed for a **mobile robotic platform** equipped with a fixed
 
 
 
-## 📐 Transformation Composition
+## Transformation Composition
 <p align="center"> <img src="img/tree_T.png" alt="Transformation graph - reference frame composition" width="420"> </p> <p align="center"> 
   <sub><sup> Graph showing the composition of transformations between reference frame (r), marker frame (M), and camera frame (c). The goal of the calibration is to estimate the unknown transformation rTc from the camera frame to the reference. 
   </sup></sub> 
@@ -57,7 +57,7 @@ The pipeline is designed for a **mobile robotic platform** equipped with a fixed
   </sup></sub>
 </p>
 
-## 🧠 Calibration Pipeline
+##  Calibration Pipeline
 
 The following sequence illustrates the key steps in the custom hand–eye calibration process using a non-structured marker and RGB-D sensing:
 1. **Data Acquisition** – Point clouds captured from multiple robot arm configurations  
@@ -67,7 +67,7 @@ The following sequence illustrates the key steps in the custom hand–eye calibr
 5. **Optimization and Matrix Computation** – Transformation **rTc** computed from aggregated correspondences
 
 
-### 🎥 Calibration Pose Sampling
+###  Calibration Pose Sampling
 
 The animation below shows the Dobot arm moving through a set of predefined configurations while marker points are tracked in the camera frame.
 
@@ -83,7 +83,7 @@ The animation below shows the Dobot arm moving through a set of predefined confi
 
 
 
-## 📸 Data Acquisition – Sensor Output Views
+##  Data Acquisition – Sensor Output Views
 
 Below are the different outputs captured by the Intel Realsense D415 during the calibration routine:
 
@@ -101,7 +101,7 @@ Below are the different outputs captured by the Intel Realsense D415 during the 
   </sup></sub>
 </p>
 
-## 🎨 Color Segmentation Process
+##  Color Segmentation Process
 
 The red marker is isolated through a 4-step process based on RGB channel manipulation:
 
@@ -122,7 +122,7 @@ The red marker is isolated through a 4-step process based on RGB channel manipul
 </p>
 
 
-## 🧩 Plane Fitting
+##  Plane Fitting
 
 Due to noise and the limitations of RGB-D sensors, the extracted 3D points may not lie on a perfect plane.  
 A **best-fit plane** is computed to correct misalignments and improve the marker center estimation.
@@ -140,7 +140,7 @@ A **best-fit plane** is computed to correct misalignments and improve the marker
 
 
 
-## 📐 Projection and Registration
+##  Projection and Registration
 
 To improve registration, the extracted marker points are projected onto an artificial plane aligned with the estimated marker normal.  
 This projection helps reduce the influence of noise before running the ICP alignment routine.
@@ -159,7 +159,7 @@ This projection helps reduce the influence of noise before running the ICP align
 </p>
 
 
-## 🧠 Optimization and Matrix Computation
+##  Optimization and Matrix Computation
 
 The final transformation rTc is estimated using a **nonlinear least-squares solver**, which minimizes the residuals between the registered points in the robot frame and those in the camera frame.
 
@@ -191,7 +191,7 @@ Below is the trend of the squared residual norm as a function of the number of c
 
 
 
-## 🧰 Tools & Components
+##  Tools & Components
 
 | Component            | Tool / Device                          |
 |----------------------|----------------------------------------|
@@ -206,18 +206,18 @@ Below is the trend of the squared residual norm as a function of the number of c
 
 
 
-## 🛠️ Development Status
-> ⚠️ This module is currently under **active development**.  <br>
+##  Development Status
+>  This module is currently under **active development**.  <br>
 > Code is being validated and optimized; full open-source release is available.  <br>
 ---
 
 
-## 📄 Copyright & Acknowledgments
+##  Copyright & Acknowledgments
 
 Special thanks to **Prof. Chiara Cosenza** and **Prof. Sergio Savino** for their guidance and supervision throughout the development of this project.<br>
 Thesis Students for testing.
 
-🧪 This work is based on the methodology described in the following publication:
+ This work is based on the methodology described in the following publication:
 
 > **Cosenza, C., Malfi, P., Nicolella, A., Niola, V., Savino, S.**  
 > *Hand-Eye Calibration Using Invariant Calibrator Placed to a Robotic Arm*.  
@@ -225,7 +225,7 @@ Thesis Students for testing.
 > Mechanisms and Machine Science, vol 141. Springer, Cham. 2024.  
 > [https://doi.org/10.1007/978-3-031-64553-2_40](https://doi.org/10.1007/978-3-031-64553-2_40)
 
-📚 **BibTeX citation:**
+ **BibTeX citation:**
 
 ```bibtex
 @InProceedings{10.1007/978-3-031-64553-2_40,
