@@ -1,13 +1,13 @@
 # H-infinity Control for Robust Trajectory Tracking
 
-## 🔧 Motivation
+##  Motivation
 
 Trajectory tracking is a fundamental requirement for autonomous mobile robots operating in uncertain and dynamic environments.  
 Classical control methods, while effective under ideal conditions, often fail to deliver reliable performance when faced with disturbances, sensor noise, or unmodeled dynamics.
 
 To overcome these challenges, this repository implements an **H∞ control strategy** that enhances robustness and ensures high-precision tracking even under adverse conditions.
 
-## 🧠 Control Strategy Overview
+##  Control Strategy Overview
 
 The control architecture is based on two key components:
 
@@ -22,7 +22,7 @@ This is achieved through an optimization process based on **Linear Matrix Inequa
 </p>
 <p align="center"><em>Block diagram of the control system, including inverse kinematics, feedforward and feedback components.</em></p>
 
-## 🧪 Experimental Validation
+##  Experimental Validation
 
 The proposed controller has been validated on a **TurtleBot3 Waffle Pi** using **ROS 2**.  
 Experiments involved tracking a figure-eight (∞) trajectory in an indoor environment with sensor noise and external disturbances.
@@ -39,7 +39,7 @@ The setup includes serial communication publishing position data as ROS topics.
 <p align="center"><em>Localization system architecture using Marvelmind and ROS 2.</em></p>
 
 
-## 📊 Performance Metrics
+##  Performance Metrics
 
 | Controller           | X RMS Error [m] | Y RMS Error [m] |
 |----------------------|------------------|------------------|
@@ -59,7 +59,7 @@ The setup includes serial communication publishing position data as ROS topics.
 <p align="center"><em>Comparison of wheel speeds for feedforward and feedback control components.</em></p>
 
 
-## 🙏 Copyright & Acknowledgments
+##  Copyright & Acknowledgments
 
 This work was carried out during my PhD at the **Universitat Politècnica de València**.
 Special thanks to: **Prof. Leopoldo Armesto**, for his continuous guidance and scientific supervision, **Ricardo Núñez Sáez**, for his contribuition and insightful discussions throughout the project.  
