@@ -1,18 +1,18 @@
-# 🛰️ Arduino Rover - Web Server Control Interface
+#  Arduino Rover - Web Server Control Interface
 
 This project provides a modular and scalable control system for a custom six-wheeled rover using **Wi-Fi access point + web interface**. It allows full directional control via a webpage hosted directly by the rover. The rover uses **Adafruit Motor Shields**, an **LSM6DS3 IMU**, and a Wi-Fi-enabled board (e.g., Arduino WiFi Rev2 or ESP module via UART).
 
 
 ---
 
-## 🚀 Main File
+##  Main File
 
 The primary Arduino sketch is: web_server_control.ino
 
 It initializes all components (WiFi, IMU, MotorShields, SD), hosts the web interface, and handles HTTP requests for rover motion commands.
 
 
-## 📡 Features
+##  Features
 
 - 📶 Wi-Fi Access Point mode using `WiFiNINA` or compatible interface
 - 🌐 Embedded HTTP server to serve control UI (buttons + velocity input)
@@ -23,7 +23,7 @@ It initializes all components (WiFi, IMU, MotorShields, SD), hosts the web inter
 
 
 
-## ✅ Getting Started
+##  Getting Started
 
 1. Open `web_server_control.ino` in the Arduino IDE.
 2. Make sure all `.ino` files are in the same folder (Arduino treats them as one sketch).
@@ -33,7 +33,7 @@ It initializes all components (WiFi, IMU, MotorShields, SD), hosts the web inter
 6. Open a browser and navigate to `http://192.168.4.1`.
 
 
-## 📄 License
+##  License
 
 This code is provided for academic, prototyping, and research purposes.  
 Feel free to adapt and reuse it with attribution.
