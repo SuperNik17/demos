@@ -71,7 +71,7 @@ LiDAR → DLO → {  (1) GMapping → /map
 </div>
 
 ##   Results & open issues
-* **Accuracy:** DLO + AMCL < 5 cm on 20 m indoor loop.  
+* **Accuracy:** DLO + AMCL < 5 cm on 20 m indoor.  
 * **Drift:** without AMCL, visible (> 0.5 m) after ~10 min continuous run.  
 * **Swarm:** slave localisation still sensitive to sharp turns; considering map-merge (`multirobot_map_merge`) for extra robustness.
 
